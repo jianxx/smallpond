@@ -1,0 +1,48 @@
+﻿smallpond.logical.dataset.SqlQueryDataSet
+=========================================
+
+.. currentmodule:: smallpond.logical.dataset
+
+.. autoclass:: SqlQueryDataSet
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SqlQueryDataSet.__init__
+      ~SqlQueryDataSet.log
+      ~SqlQueryDataSet.merge
+      ~SqlQueryDataSet.partition_by_files
+      ~SqlQueryDataSet.reset
+      ~SqlQueryDataSet.sql_query_fragment
+      ~SqlQueryDataSet.to_arrow_table
+      ~SqlQueryDataSet.to_batch_reader
+      ~SqlQueryDataSet.to_pandas
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SqlQueryDataSet.sql_query
+      ~SqlQueryDataSet.query_builder
+      ~SqlQueryDataSet.absolute_paths
+      ~SqlQueryDataSet.columns
+      ~SqlQueryDataSet.empty
+      ~SqlQueryDataSet.num_files
+      ~SqlQueryDataSet.num_rows
+      ~SqlQueryDataSet.paths
+      ~SqlQueryDataSet.recursive
+      ~SqlQueryDataSet.resolved_paths
+      ~SqlQueryDataSet.root_dir
+      ~SqlQueryDataSet.udfs
+      ~SqlQueryDataSet.union_by_name
+   
+   

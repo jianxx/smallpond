@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.write\_parquet
+============================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.write_parquet

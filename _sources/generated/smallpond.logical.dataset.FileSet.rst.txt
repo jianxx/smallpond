@@ -1,0 +1,46 @@
+﻿smallpond.logical.dataset.FileSet
+=================================
+
+.. currentmodule:: smallpond.logical.dataset
+
+.. autoclass:: FileSet
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~FileSet.__init__
+      ~FileSet.log
+      ~FileSet.merge
+      ~FileSet.partition_by_files
+      ~FileSet.reset
+      ~FileSet.sql_query_fragment
+      ~FileSet.to_arrow_table
+      ~FileSet.to_batch_reader
+      ~FileSet.to_pandas
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FileSet.paths
+      ~FileSet.root_dir
+      ~FileSet.recursive
+      ~FileSet.columns
+      ~FileSet.absolute_paths
+      ~FileSet.empty
+      ~FileSet.num_files
+      ~FileSet.num_rows
+      ~FileSet.resolved_paths
+      ~FileSet.udfs
+      ~FileSet.union_by_name
+   
+   

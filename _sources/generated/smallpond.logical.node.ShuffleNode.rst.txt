@@ -1,0 +1,45 @@
+﻿smallpond.logical.node.ShuffleNode
+==================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: ShuffleNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ShuffleNode.__init__
+      ~ShuffleNode.add_perf_metrics
+      ~ShuffleNode.create_consumer_task
+      ~ShuffleNode.create_merge_task
+      ~ShuffleNode.create_producer_task
+      ~ShuffleNode.create_split_task
+      ~ShuffleNode.create_task
+      ~ShuffleNode.get_perf_stats
+      ~ShuffleNode.slim_copy
+      ~ShuffleNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ShuffleNode.default_cpu_limit
+      ~ShuffleNode.default_data_partition_column
+      ~ShuffleNode.default_engine_type
+      ~ShuffleNode.default_memory_limit
+      ~ShuffleNode.default_row_group_size
+      ~ShuffleNode.enable_resource_boost
+      ~ShuffleNode.max_card_of_producers_x_consumers
+      ~ShuffleNode.max_num_producer_tasks
+      ~ShuffleNode.num_partitions
+   
+   

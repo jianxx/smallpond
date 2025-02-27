@@ -1,0 +1,103 @@
+﻿smallpond.execution.task.MergeDataSetsTask
+==========================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: MergeDataSetsTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MergeDataSetsTask.__init__
+      ~MergeDataSetsTask.add_elapsed_time
+      ~MergeDataSetsTask.adjust_row_group_size
+      ~MergeDataSetsTask.clean_complex_attrs
+      ~MergeDataSetsTask.clean_output
+      ~MergeDataSetsTask.cleanup
+      ~MergeDataSetsTask.compute_avg_row_size
+      ~MergeDataSetsTask.dump
+      ~MergeDataSetsTask.exec
+      ~MergeDataSetsTask.finalize
+      ~MergeDataSetsTask.get_partition_info
+      ~MergeDataSetsTask.initialize
+      ~MergeDataSetsTask.inject_fault
+      ~MergeDataSetsTask.merge_metrics
+      ~MergeDataSetsTask.oom
+      ~MergeDataSetsTask.parquet_kv_metadata_bytes
+      ~MergeDataSetsTask.parquet_kv_metadata_str
+      ~MergeDataSetsTask.random_float
+      ~MergeDataSetsTask.random_uint32
+      ~MergeDataSetsTask.run
+      ~MergeDataSetsTask.run_on_ray
+      ~MergeDataSetsTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MergeDataSetsTask.ctx
+      ~MergeDataSetsTask.id
+      ~MergeDataSetsTask.node_id
+      ~MergeDataSetsTask.sched_epoch
+      ~MergeDataSetsTask.output_name
+      ~MergeDataSetsTask.output_root
+      ~MergeDataSetsTask.dataset
+      ~MergeDataSetsTask.input_deps
+      ~MergeDataSetsTask.output_deps
+      ~MergeDataSetsTask.perf_metrics
+      ~MergeDataSetsTask.perf_profile
+      ~MergeDataSetsTask.runtime_state
+      ~MergeDataSetsTask.input_datasets
+      ~MergeDataSetsTask.allow_speculative_exec
+      ~MergeDataSetsTask.any_input_empty
+      ~MergeDataSetsTask.cpu_limit
+      ~MergeDataSetsTask.default_output_name
+      ~MergeDataSetsTask.elapsed_time
+      ~MergeDataSetsTask.exception
+      ~MergeDataSetsTask.exec_cq
+      ~MergeDataSetsTask.exec_id
+      ~MergeDataSetsTask.exec_on_scheduler
+      ~MergeDataSetsTask.fail_count
+      ~MergeDataSetsTask.final_output_abspath
+      ~MergeDataSetsTask.finish_time
+      ~MergeDataSetsTask.gpu_limit
+      ~MergeDataSetsTask.key
+      ~MergeDataSetsTask.local_gpu
+      ~MergeDataSetsTask.local_gpu_ranks
+      ~MergeDataSetsTask.local_rank
+      ~MergeDataSetsTask.location
+      ~MergeDataSetsTask.memory_limit
+      ~MergeDataSetsTask.numa_node
+      ~MergeDataSetsTask.numpy_random_gen
+      ~MergeDataSetsTask.output
+      ~MergeDataSetsTask.output_dirname
+      ~MergeDataSetsTask.output_filename
+      ~MergeDataSetsTask.partition_dims
+      ~MergeDataSetsTask.partition_infos
+      ~MergeDataSetsTask.partition_infos_as_dict
+      ~MergeDataSetsTask.python_random_gen
+      ~MergeDataSetsTask.random_seed_bytes
+      ~MergeDataSetsTask.ray_dataset_path
+      ~MergeDataSetsTask.ray_marker_path
+      ~MergeDataSetsTask.retry_count
+      ~MergeDataSetsTask.runtime_id
+      ~MergeDataSetsTask.runtime_output_abspath
+      ~MergeDataSetsTask.self_contained_output
+      ~MergeDataSetsTask.skip_when_any_input_empty
+      ~MergeDataSetsTask.staging_root
+      ~MergeDataSetsTask.start_time
+      ~MergeDataSetsTask.status
+      ~MergeDataSetsTask.temp_abspath
+      ~MergeDataSetsTask.temp_output
+      ~MergeDataSetsTask.uniform_failure_prob
+   
+   

@@ -1,0 +1,31 @@
+﻿smallpond.execution.manager.JobManager
+======================================
+
+.. currentmodule:: smallpond.execution.manager
+
+.. autoclass:: JobManager
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~JobManager.__init__
+      ~JobManager.run
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~JobManager.env_template
+      ~JobManager.jemalloc_filename
+      ~JobManager.mimalloc_filename
+   
+   

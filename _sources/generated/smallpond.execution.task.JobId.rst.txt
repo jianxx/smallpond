@@ -1,0 +1,45 @@
+﻿smallpond.execution.task.JobId
+==============================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: JobId
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~JobId.__init__
+      ~JobId.new
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~JobId.int
+      ~JobId.is_safe
+      ~JobId.bytes
+      ~JobId.bytes_le
+      ~JobId.clock_seq
+      ~JobId.clock_seq_hi_variant
+      ~JobId.clock_seq_low
+      ~JobId.fields
+      ~JobId.hex
+      ~JobId.node
+      ~JobId.time
+      ~JobId.time_hi_version
+      ~JobId.time_low
+      ~JobId.time_mid
+      ~JobId.urn
+      ~JobId.variant
+      ~JobId.version
+   
+   

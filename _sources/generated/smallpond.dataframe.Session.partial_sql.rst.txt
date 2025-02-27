@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.Session.partial\_sql
+========================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: Session.partial_sql

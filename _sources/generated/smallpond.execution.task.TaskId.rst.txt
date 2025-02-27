@@ -1,0 +1,36 @@
+﻿smallpond.execution.task.TaskId
+===============================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: TaskId
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TaskId.__init__
+      ~TaskId.as_integer_ratio
+      ~TaskId.bit_length
+      ~TaskId.conjugate
+      ~TaskId.from_bytes
+      ~TaskId.to_bytes
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TaskId.denominator
+      ~TaskId.imag
+      ~TaskId.numerator
+      ~TaskId.real
+   
+   

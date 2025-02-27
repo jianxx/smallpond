@@ -1,0 +1,108 @@
+﻿smallpond.execution.task.LoadPartitionedDataSetProducerTask
+===========================================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: LoadPartitionedDataSetProducerTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LoadPartitionedDataSetProducerTask.__init__
+      ~LoadPartitionedDataSetProducerTask.add_elapsed_time
+      ~LoadPartitionedDataSetProducerTask.adjust_row_group_size
+      ~LoadPartitionedDataSetProducerTask.clean_complex_attrs
+      ~LoadPartitionedDataSetProducerTask.clean_output
+      ~LoadPartitionedDataSetProducerTask.cleanup
+      ~LoadPartitionedDataSetProducerTask.compute_avg_row_size
+      ~LoadPartitionedDataSetProducerTask.dump
+      ~LoadPartitionedDataSetProducerTask.exec
+      ~LoadPartitionedDataSetProducerTask.finalize
+      ~LoadPartitionedDataSetProducerTask.get_partition_info
+      ~LoadPartitionedDataSetProducerTask.initialize
+      ~LoadPartitionedDataSetProducerTask.inject_fault
+      ~LoadPartitionedDataSetProducerTask.merge_metrics
+      ~LoadPartitionedDataSetProducerTask.oom
+      ~LoadPartitionedDataSetProducerTask.parquet_kv_metadata_bytes
+      ~LoadPartitionedDataSetProducerTask.parquet_kv_metadata_str
+      ~LoadPartitionedDataSetProducerTask.random_float
+      ~LoadPartitionedDataSetProducerTask.random_uint32
+      ~LoadPartitionedDataSetProducerTask.run
+      ~LoadPartitionedDataSetProducerTask.run_on_ray
+      ~LoadPartitionedDataSetProducerTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LoadPartitionedDataSetProducerTask.data_partition_column
+      ~LoadPartitionedDataSetProducerTask.hive_partitioning
+      ~LoadPartitionedDataSetProducerTask.allow_speculative_exec
+      ~LoadPartitionedDataSetProducerTask.any_input_empty
+      ~LoadPartitionedDataSetProducerTask.cpu_limit
+      ~LoadPartitionedDataSetProducerTask.ctx
+      ~LoadPartitionedDataSetProducerTask.dataset
+      ~LoadPartitionedDataSetProducerTask.default_output_name
+      ~LoadPartitionedDataSetProducerTask.dimension
+      ~LoadPartitionedDataSetProducerTask.elapsed_time
+      ~LoadPartitionedDataSetProducerTask.exception
+      ~LoadPartitionedDataSetProducerTask.exec_cq
+      ~LoadPartitionedDataSetProducerTask.exec_id
+      ~LoadPartitionedDataSetProducerTask.exec_on_scheduler
+      ~LoadPartitionedDataSetProducerTask.fail_count
+      ~LoadPartitionedDataSetProducerTask.final_output_abspath
+      ~LoadPartitionedDataSetProducerTask.finish_time
+      ~LoadPartitionedDataSetProducerTask.gpu_limit
+      ~LoadPartitionedDataSetProducerTask.id
+      ~LoadPartitionedDataSetProducerTask.input_datasets
+      ~LoadPartitionedDataSetProducerTask.input_deps
+      ~LoadPartitionedDataSetProducerTask.key
+      ~LoadPartitionedDataSetProducerTask.local_gpu
+      ~LoadPartitionedDataSetProducerTask.local_gpu_ranks
+      ~LoadPartitionedDataSetProducerTask.local_rank
+      ~LoadPartitionedDataSetProducerTask.location
+      ~LoadPartitionedDataSetProducerTask.memory_limit
+      ~LoadPartitionedDataSetProducerTask.node_id
+      ~LoadPartitionedDataSetProducerTask.npartitions
+      ~LoadPartitionedDataSetProducerTask.numa_node
+      ~LoadPartitionedDataSetProducerTask.numpy_random_gen
+      ~LoadPartitionedDataSetProducerTask.output
+      ~LoadPartitionedDataSetProducerTask.output_deps
+      ~LoadPartitionedDataSetProducerTask.output_dirname
+      ~LoadPartitionedDataSetProducerTask.output_filename
+      ~LoadPartitionedDataSetProducerTask.output_name
+      ~LoadPartitionedDataSetProducerTask.output_root
+      ~LoadPartitionedDataSetProducerTask.partition_dims
+      ~LoadPartitionedDataSetProducerTask.partition_infos
+      ~LoadPartitionedDataSetProducerTask.partition_infos_as_dict
+      ~LoadPartitionedDataSetProducerTask.partitioned_datasets
+      ~LoadPartitionedDataSetProducerTask.perf_metrics
+      ~LoadPartitionedDataSetProducerTask.perf_profile
+      ~LoadPartitionedDataSetProducerTask.python_random_gen
+      ~LoadPartitionedDataSetProducerTask.random_seed_bytes
+      ~LoadPartitionedDataSetProducerTask.ray_dataset_path
+      ~LoadPartitionedDataSetProducerTask.ray_marker_path
+      ~LoadPartitionedDataSetProducerTask.retry_count
+      ~LoadPartitionedDataSetProducerTask.runtime_id
+      ~LoadPartitionedDataSetProducerTask.runtime_output_abspath
+      ~LoadPartitionedDataSetProducerTask.runtime_state
+      ~LoadPartitionedDataSetProducerTask.sched_epoch
+      ~LoadPartitionedDataSetProducerTask.self_contained_output
+      ~LoadPartitionedDataSetProducerTask.skip_when_any_input_empty
+      ~LoadPartitionedDataSetProducerTask.staging_root
+      ~LoadPartitionedDataSetProducerTask.start_time
+      ~LoadPartitionedDataSetProducerTask.status
+      ~LoadPartitionedDataSetProducerTask.temp_abspath
+      ~LoadPartitionedDataSetProducerTask.temp_output
+      ~LoadPartitionedDataSetProducerTask.uniform_failure_prob
+   
+   

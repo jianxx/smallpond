@@ -1,0 +1,30 @@
+﻿smallpond.execution.task.TaskRuntimeId
+======================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: TaskRuntimeId
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TaskRuntimeId.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TaskRuntimeId.id
+      ~TaskRuntimeId.epoch
+      ~TaskRuntimeId.retry
+   
+   

@@ -1,0 +1,107 @@
+﻿smallpond.execution.task.DataSinkTask
+=====================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: DataSinkTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DataSinkTask.__init__
+      ~DataSinkTask.add_elapsed_time
+      ~DataSinkTask.adjust_row_group_size
+      ~DataSinkTask.clean_complex_attrs
+      ~DataSinkTask.clean_output
+      ~DataSinkTask.cleanup
+      ~DataSinkTask.collect_output_files
+      ~DataSinkTask.compute_avg_row_size
+      ~DataSinkTask.dump
+      ~DataSinkTask.exec
+      ~DataSinkTask.finalize
+      ~DataSinkTask.get_partition_info
+      ~DataSinkTask.initialize
+      ~DataSinkTask.inject_fault
+      ~DataSinkTask.merge_metrics
+      ~DataSinkTask.oom
+      ~DataSinkTask.parquet_kv_metadata_bytes
+      ~DataSinkTask.parquet_kv_metadata_str
+      ~DataSinkTask.random_float
+      ~DataSinkTask.random_uint32
+      ~DataSinkTask.run
+      ~DataSinkTask.run_on_ray
+      ~DataSinkTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DataSinkTask.type
+      ~DataSinkTask.is_final_node
+      ~DataSinkTask.allow_speculative_exec
+      ~DataSinkTask.any_input_empty
+      ~DataSinkTask.cpu_limit
+      ~DataSinkTask.ctx
+      ~DataSinkTask.dataset
+      ~DataSinkTask.default_output_name
+      ~DataSinkTask.elapsed_time
+      ~DataSinkTask.exception
+      ~DataSinkTask.exec_cq
+      ~DataSinkTask.exec_id
+      ~DataSinkTask.exec_on_scheduler
+      ~DataSinkTask.fail_count
+      ~DataSinkTask.final_output_abspath
+      ~DataSinkTask.finish_time
+      ~DataSinkTask.gpu_limit
+      ~DataSinkTask.id
+      ~DataSinkTask.input_datasets
+      ~DataSinkTask.input_deps
+      ~DataSinkTask.key
+      ~DataSinkTask.local_gpu
+      ~DataSinkTask.local_gpu_ranks
+      ~DataSinkTask.local_rank
+      ~DataSinkTask.location
+      ~DataSinkTask.manifest_filename
+      ~DataSinkTask.memory_limit
+      ~DataSinkTask.node_id
+      ~DataSinkTask.numa_node
+      ~DataSinkTask.numpy_random_gen
+      ~DataSinkTask.output
+      ~DataSinkTask.output_deps
+      ~DataSinkTask.output_dirname
+      ~DataSinkTask.output_filename
+      ~DataSinkTask.output_name
+      ~DataSinkTask.output_root
+      ~DataSinkTask.partition_dims
+      ~DataSinkTask.partition_infos
+      ~DataSinkTask.partition_infos_as_dict
+      ~DataSinkTask.perf_metrics
+      ~DataSinkTask.perf_profile
+      ~DataSinkTask.python_random_gen
+      ~DataSinkTask.random_seed_bytes
+      ~DataSinkTask.ray_dataset_path
+      ~DataSinkTask.ray_marker_path
+      ~DataSinkTask.retry_count
+      ~DataSinkTask.runtime_id
+      ~DataSinkTask.runtime_output_abspath
+      ~DataSinkTask.runtime_state
+      ~DataSinkTask.sched_epoch
+      ~DataSinkTask.self_contained_output
+      ~DataSinkTask.skip_when_any_input_empty
+      ~DataSinkTask.staging_root
+      ~DataSinkTask.start_time
+      ~DataSinkTask.status
+      ~DataSinkTask.temp_abspath
+      ~DataSinkTask.temp_output
+      ~DataSinkTask.uniform_failure_prob
+   
+   

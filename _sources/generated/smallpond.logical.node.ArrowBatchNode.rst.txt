@@ -1,0 +1,39 @@
+﻿smallpond.logical.node.ArrowBatchNode
+=====================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: ArrowBatchNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ArrowBatchNode.__init__
+      ~ArrowBatchNode.add_perf_metrics
+      ~ArrowBatchNode.create_task
+      ~ArrowBatchNode.get_perf_stats
+      ~ArrowBatchNode.process
+      ~ArrowBatchNode.slim_copy
+      ~ArrowBatchNode.spawn
+      ~ArrowBatchNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ArrowBatchNode.default_batch_size
+      ~ArrowBatchNode.default_row_group_size
+      ~ArrowBatchNode.default_secs_checkpoint_interval
+      ~ArrowBatchNode.enable_resource_boost
+      ~ArrowBatchNode.num_partitions
+   
+   

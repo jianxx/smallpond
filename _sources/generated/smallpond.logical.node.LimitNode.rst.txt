@@ -1,0 +1,41 @@
+﻿smallpond.logical.node.LimitNode
+================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: LimitNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LimitNode.__init__
+      ~LimitNode.add_perf_metrics
+      ~LimitNode.create_merge_task
+      ~LimitNode.create_task
+      ~LimitNode.get_perf_stats
+      ~LimitNode.slim_copy
+      ~LimitNode.spawn
+      ~LimitNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LimitNode.default_cpu_limit
+      ~LimitNode.default_memory_limit
+      ~LimitNode.default_row_group_size
+      ~LimitNode.enable_resource_boost
+      ~LimitNode.max_udf_cpu_limit
+      ~LimitNode.num_partitions
+      ~LimitNode.oneline_query
+   
+   

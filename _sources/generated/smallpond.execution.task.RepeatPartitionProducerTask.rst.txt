@@ -1,0 +1,106 @@
+﻿smallpond.execution.task.RepeatPartitionProducerTask
+====================================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: RepeatPartitionProducerTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RepeatPartitionProducerTask.__init__
+      ~RepeatPartitionProducerTask.add_elapsed_time
+      ~RepeatPartitionProducerTask.adjust_row_group_size
+      ~RepeatPartitionProducerTask.clean_complex_attrs
+      ~RepeatPartitionProducerTask.clean_output
+      ~RepeatPartitionProducerTask.cleanup
+      ~RepeatPartitionProducerTask.compute_avg_row_size
+      ~RepeatPartitionProducerTask.dump
+      ~RepeatPartitionProducerTask.exec
+      ~RepeatPartitionProducerTask.finalize
+      ~RepeatPartitionProducerTask.get_partition_info
+      ~RepeatPartitionProducerTask.initialize
+      ~RepeatPartitionProducerTask.inject_fault
+      ~RepeatPartitionProducerTask.merge_metrics
+      ~RepeatPartitionProducerTask.oom
+      ~RepeatPartitionProducerTask.parquet_kv_metadata_bytes
+      ~RepeatPartitionProducerTask.parquet_kv_metadata_str
+      ~RepeatPartitionProducerTask.random_float
+      ~RepeatPartitionProducerTask.random_uint32
+      ~RepeatPartitionProducerTask.run
+      ~RepeatPartitionProducerTask.run_on_ray
+      ~RepeatPartitionProducerTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RepeatPartitionProducerTask.npartitions
+      ~RepeatPartitionProducerTask.dimension
+      ~RepeatPartitionProducerTask.partitioned_datasets
+      ~RepeatPartitionProducerTask.allow_speculative_exec
+      ~RepeatPartitionProducerTask.any_input_empty
+      ~RepeatPartitionProducerTask.cpu_limit
+      ~RepeatPartitionProducerTask.ctx
+      ~RepeatPartitionProducerTask.dataset
+      ~RepeatPartitionProducerTask.default_output_name
+      ~RepeatPartitionProducerTask.elapsed_time
+      ~RepeatPartitionProducerTask.exception
+      ~RepeatPartitionProducerTask.exec_cq
+      ~RepeatPartitionProducerTask.exec_id
+      ~RepeatPartitionProducerTask.exec_on_scheduler
+      ~RepeatPartitionProducerTask.fail_count
+      ~RepeatPartitionProducerTask.final_output_abspath
+      ~RepeatPartitionProducerTask.finish_time
+      ~RepeatPartitionProducerTask.gpu_limit
+      ~RepeatPartitionProducerTask.id
+      ~RepeatPartitionProducerTask.input_datasets
+      ~RepeatPartitionProducerTask.input_deps
+      ~RepeatPartitionProducerTask.key
+      ~RepeatPartitionProducerTask.local_gpu
+      ~RepeatPartitionProducerTask.local_gpu_ranks
+      ~RepeatPartitionProducerTask.local_rank
+      ~RepeatPartitionProducerTask.location
+      ~RepeatPartitionProducerTask.memory_limit
+      ~RepeatPartitionProducerTask.node_id
+      ~RepeatPartitionProducerTask.numa_node
+      ~RepeatPartitionProducerTask.numpy_random_gen
+      ~RepeatPartitionProducerTask.output
+      ~RepeatPartitionProducerTask.output_deps
+      ~RepeatPartitionProducerTask.output_dirname
+      ~RepeatPartitionProducerTask.output_filename
+      ~RepeatPartitionProducerTask.output_name
+      ~RepeatPartitionProducerTask.output_root
+      ~RepeatPartitionProducerTask.partition_dims
+      ~RepeatPartitionProducerTask.partition_infos
+      ~RepeatPartitionProducerTask.partition_infos_as_dict
+      ~RepeatPartitionProducerTask.perf_metrics
+      ~RepeatPartitionProducerTask.perf_profile
+      ~RepeatPartitionProducerTask.python_random_gen
+      ~RepeatPartitionProducerTask.random_seed_bytes
+      ~RepeatPartitionProducerTask.ray_dataset_path
+      ~RepeatPartitionProducerTask.ray_marker_path
+      ~RepeatPartitionProducerTask.retry_count
+      ~RepeatPartitionProducerTask.runtime_id
+      ~RepeatPartitionProducerTask.runtime_output_abspath
+      ~RepeatPartitionProducerTask.runtime_state
+      ~RepeatPartitionProducerTask.sched_epoch
+      ~RepeatPartitionProducerTask.self_contained_output
+      ~RepeatPartitionProducerTask.skip_when_any_input_empty
+      ~RepeatPartitionProducerTask.staging_root
+      ~RepeatPartitionProducerTask.start_time
+      ~RepeatPartitionProducerTask.status
+      ~RepeatPartitionProducerTask.temp_abspath
+      ~RepeatPartitionProducerTask.temp_output
+      ~RepeatPartitionProducerTask.uniform_failure_prob
+   
+   

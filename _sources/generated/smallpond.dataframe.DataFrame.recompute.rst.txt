@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.recompute
+=======================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.recompute

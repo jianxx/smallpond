@@ -1,0 +1,132 @@
+﻿smallpond.execution.task.ArrowBatchTask
+=======================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: ArrowBatchTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ArrowBatchTask.__init__
+      ~ArrowBatchTask.add_elapsed_time
+      ~ArrowBatchTask.adjust_row_group_size
+      ~ArrowBatchTask.clean_complex_attrs
+      ~ArrowBatchTask.clean_output
+      ~ArrowBatchTask.cleanup
+      ~ArrowBatchTask.compute_avg_row_size
+      ~ArrowBatchTask.create_input_views
+      ~ArrowBatchTask.dump
+      ~ArrowBatchTask.dump_output
+      ~ArrowBatchTask.exec
+      ~ArrowBatchTask.exec_query
+      ~ArrowBatchTask.finalize
+      ~ArrowBatchTask.get_partition_info
+      ~ArrowBatchTask.initialize
+      ~ArrowBatchTask.inject_fault
+      ~ArrowBatchTask.merge_metrics
+      ~ArrowBatchTask.oom
+      ~ArrowBatchTask.parquet_kv_metadata_bytes
+      ~ArrowBatchTask.parquet_kv_metadata_str
+      ~ArrowBatchTask.prepare_connection
+      ~ArrowBatchTask.process
+      ~ArrowBatchTask.random_float
+      ~ArrowBatchTask.random_uint32
+      ~ArrowBatchTask.restore_input_state
+      ~ArrowBatchTask.run
+      ~ArrowBatchTask.run_on_ray
+      ~ArrowBatchTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ArrowBatchTask.process_func
+      ~ArrowBatchTask.background_io_thread
+      ~ArrowBatchTask.streaming_batch_size
+      ~ArrowBatchTask.streaming_batch_count
+      ~ArrowBatchTask.parquet_row_group_size
+      ~ArrowBatchTask.parquet_row_group_bytes
+      ~ArrowBatchTask.parquet_dictionary_encoding
+      ~ArrowBatchTask.parquet_compression
+      ~ArrowBatchTask.parquet_compression_level
+      ~ArrowBatchTask.secs_checkpoint_interval
+      ~ArrowBatchTask.allow_speculative_exec
+      ~ArrowBatchTask.any_input_empty
+      ~ArrowBatchTask.compression_level_str
+      ~ArrowBatchTask.compression_options
+      ~ArrowBatchTask.compression_type_str
+      ~ArrowBatchTask.cpu_limit
+      ~ArrowBatchTask.cpu_overcommit_ratio
+      ~ArrowBatchTask.ctx
+      ~ArrowBatchTask.dataset
+      ~ArrowBatchTask.default_output_name
+      ~ArrowBatchTask.elapsed_time
+      ~ArrowBatchTask.enable_temp_directory
+      ~ArrowBatchTask.exception
+      ~ArrowBatchTask.exec_cq
+      ~ArrowBatchTask.exec_id
+      ~ArrowBatchTask.exec_on_scheduler
+      ~ArrowBatchTask.fail_count
+      ~ArrowBatchTask.final_output_abspath
+      ~ArrowBatchTask.finish_time
+      ~ArrowBatchTask.gpu_limit
+      ~ArrowBatchTask.id
+      ~ArrowBatchTask.input_datasets
+      ~ArrowBatchTask.input_deps
+      ~ArrowBatchTask.input_udfs
+      ~ArrowBatchTask.input_view_index
+      ~ArrowBatchTask.key
+      ~ArrowBatchTask.local_gpu
+      ~ArrowBatchTask.local_gpu_ranks
+      ~ArrowBatchTask.local_rank
+      ~ArrowBatchTask.location
+      ~ArrowBatchTask.max_batch_size
+      ~ArrowBatchTask.memory_limit
+      ~ArrowBatchTask.memory_overcommit_ratio
+      ~ArrowBatchTask.node_id
+      ~ArrowBatchTask.numa_node
+      ~ArrowBatchTask.numpy_random_gen
+      ~ArrowBatchTask.output
+      ~ArrowBatchTask.output_deps
+      ~ArrowBatchTask.output_dirname
+      ~ArrowBatchTask.output_filename
+      ~ArrowBatchTask.output_name
+      ~ArrowBatchTask.output_root
+      ~ArrowBatchTask.partition_dims
+      ~ArrowBatchTask.partition_infos
+      ~ArrowBatchTask.partition_infos_as_dict
+      ~ArrowBatchTask.perf_metrics
+      ~ArrowBatchTask.perf_profile
+      ~ArrowBatchTask.python_random_gen
+      ~ArrowBatchTask.query_udfs
+      ~ArrowBatchTask.rand_seed_float
+      ~ArrowBatchTask.rand_seed_uint32
+      ~ArrowBatchTask.random_seed_bytes
+      ~ArrowBatchTask.ray_dataset_path
+      ~ArrowBatchTask.ray_marker_path
+      ~ArrowBatchTask.retry_count
+      ~ArrowBatchTask.runtime_id
+      ~ArrowBatchTask.runtime_output_abspath
+      ~ArrowBatchTask.runtime_state
+      ~ArrowBatchTask.sched_epoch
+      ~ArrowBatchTask.self_contained_output
+      ~ArrowBatchTask.skip_when_any_input_empty
+      ~ArrowBatchTask.staging_root
+      ~ArrowBatchTask.start_time
+      ~ArrowBatchTask.status
+      ~ArrowBatchTask.temp_abspath
+      ~ArrowBatchTask.temp_output
+      ~ArrowBatchTask.udfs
+      ~ArrowBatchTask.uniform_failure_prob
+   
+   

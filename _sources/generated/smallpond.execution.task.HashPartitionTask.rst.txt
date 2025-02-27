@@ -1,0 +1,124 @@
+﻿smallpond.execution.task.HashPartitionTask
+==========================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: HashPartitionTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~HashPartitionTask.__init__
+      ~HashPartitionTask.add_elapsed_time
+      ~HashPartitionTask.adjust_row_group_size
+      ~HashPartitionTask.clean_complex_attrs
+      ~HashPartitionTask.clean_output
+      ~HashPartitionTask.cleanup
+      ~HashPartitionTask.compute_avg_row_size
+      ~HashPartitionTask.create
+      ~HashPartitionTask.dump
+      ~HashPartitionTask.exec
+      ~HashPartitionTask.finalize
+      ~HashPartitionTask.get_partition_info
+      ~HashPartitionTask.initialize
+      ~HashPartitionTask.inject_fault
+      ~HashPartitionTask.merge_metrics
+      ~HashPartitionTask.oom
+      ~HashPartitionTask.parquet_kv_metadata_bytes
+      ~HashPartitionTask.parquet_kv_metadata_str
+      ~HashPartitionTask.partition
+      ~HashPartitionTask.random_float
+      ~HashPartitionTask.random_uint32
+      ~HashPartitionTask.run
+      ~HashPartitionTask.run_on_ray
+      ~HashPartitionTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~HashPartitionTask.hash_columns
+      ~HashPartitionTask.data_partition_column
+      ~HashPartitionTask.random_shuffle
+      ~HashPartitionTask.shuffle_only
+      ~HashPartitionTask.drop_partition_column
+      ~HashPartitionTask.use_parquet_writer
+      ~HashPartitionTask.hive_partitioning
+      ~HashPartitionTask.parquet_row_group_size
+      ~HashPartitionTask.parquet_row_group_bytes
+      ~HashPartitionTask.parquet_dictionary_encoding
+      ~HashPartitionTask.parquet_compression
+      ~HashPartitionTask.parquet_compression_level
+      ~HashPartitionTask.partitioned_datasets
+      ~HashPartitionTask.allow_speculative_exec
+      ~HashPartitionTask.any_input_empty
+      ~HashPartitionTask.cpu_limit
+      ~HashPartitionTask.ctx
+      ~HashPartitionTask.dataset
+      ~HashPartitionTask.default_output_name
+      ~HashPartitionTask.dimension
+      ~HashPartitionTask.elapsed_time
+      ~HashPartitionTask.exception
+      ~HashPartitionTask.exec_cq
+      ~HashPartitionTask.exec_id
+      ~HashPartitionTask.exec_on_scheduler
+      ~HashPartitionTask.fail_count
+      ~HashPartitionTask.final_output_abspath
+      ~HashPartitionTask.finish_time
+      ~HashPartitionTask.gpu_limit
+      ~HashPartitionTask.id
+      ~HashPartitionTask.input_datasets
+      ~HashPartitionTask.input_deps
+      ~HashPartitionTask.io_workers
+      ~HashPartitionTask.key
+      ~HashPartitionTask.local_gpu
+      ~HashPartitionTask.local_gpu_ranks
+      ~HashPartitionTask.local_rank
+      ~HashPartitionTask.location
+      ~HashPartitionTask.max_batch_size
+      ~HashPartitionTask.memory_limit
+      ~HashPartitionTask.node_id
+      ~HashPartitionTask.npartitions
+      ~HashPartitionTask.num_workers
+      ~HashPartitionTask.numa_node
+      ~HashPartitionTask.numpy_random_gen
+      ~HashPartitionTask.output
+      ~HashPartitionTask.output_deps
+      ~HashPartitionTask.output_dirname
+      ~HashPartitionTask.output_filename
+      ~HashPartitionTask.output_name
+      ~HashPartitionTask.output_root
+      ~HashPartitionTask.partition_dims
+      ~HashPartitionTask.partition_infos
+      ~HashPartitionTask.partition_infos_as_dict
+      ~HashPartitionTask.perf_metrics
+      ~HashPartitionTask.perf_profile
+      ~HashPartitionTask.python_random_gen
+      ~HashPartitionTask.random_seed_bytes
+      ~HashPartitionTask.ray_dataset_path
+      ~HashPartitionTask.ray_marker_path
+      ~HashPartitionTask.retry_count
+      ~HashPartitionTask.runtime_id
+      ~HashPartitionTask.runtime_output_abspath
+      ~HashPartitionTask.runtime_state
+      ~HashPartitionTask.sched_epoch
+      ~HashPartitionTask.self_contained_output
+      ~HashPartitionTask.skip_when_any_input_empty
+      ~HashPartitionTask.staging_root
+      ~HashPartitionTask.start_time
+      ~HashPartitionTask.status
+      ~HashPartitionTask.temp_abspath
+      ~HashPartitionTask.temp_output
+      ~HashPartitionTask.uniform_failure_prob
+      ~HashPartitionTask.write_buffer_size
+   
+   

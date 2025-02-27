@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.Session.wait
+================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: Session.wait

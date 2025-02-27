@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.map\_batches
+==========================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.map_batches

@@ -1,0 +1,105 @@
+﻿smallpond.execution.task.SplitDataSetTask
+=========================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: SplitDataSetTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SplitDataSetTask.__init__
+      ~SplitDataSetTask.add_elapsed_time
+      ~SplitDataSetTask.adjust_row_group_size
+      ~SplitDataSetTask.clean_complex_attrs
+      ~SplitDataSetTask.clean_output
+      ~SplitDataSetTask.cleanup
+      ~SplitDataSetTask.compute_avg_row_size
+      ~SplitDataSetTask.dump
+      ~SplitDataSetTask.exec
+      ~SplitDataSetTask.finalize
+      ~SplitDataSetTask.get_partition_info
+      ~SplitDataSetTask.initialize
+      ~SplitDataSetTask.inject_fault
+      ~SplitDataSetTask.merge_metrics
+      ~SplitDataSetTask.oom
+      ~SplitDataSetTask.parquet_kv_metadata_bytes
+      ~SplitDataSetTask.parquet_kv_metadata_str
+      ~SplitDataSetTask.random_float
+      ~SplitDataSetTask.random_uint32
+      ~SplitDataSetTask.run
+      ~SplitDataSetTask.run_on_ray
+      ~SplitDataSetTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SplitDataSetTask.partition
+      ~SplitDataSetTask.npartitions
+      ~SplitDataSetTask.allow_speculative_exec
+      ~SplitDataSetTask.any_input_empty
+      ~SplitDataSetTask.cpu_limit
+      ~SplitDataSetTask.ctx
+      ~SplitDataSetTask.dataset
+      ~SplitDataSetTask.default_output_name
+      ~SplitDataSetTask.elapsed_time
+      ~SplitDataSetTask.exception
+      ~SplitDataSetTask.exec_cq
+      ~SplitDataSetTask.exec_id
+      ~SplitDataSetTask.exec_on_scheduler
+      ~SplitDataSetTask.fail_count
+      ~SplitDataSetTask.final_output_abspath
+      ~SplitDataSetTask.finish_time
+      ~SplitDataSetTask.gpu_limit
+      ~SplitDataSetTask.id
+      ~SplitDataSetTask.input_datasets
+      ~SplitDataSetTask.input_deps
+      ~SplitDataSetTask.key
+      ~SplitDataSetTask.local_gpu
+      ~SplitDataSetTask.local_gpu_ranks
+      ~SplitDataSetTask.local_rank
+      ~SplitDataSetTask.location
+      ~SplitDataSetTask.memory_limit
+      ~SplitDataSetTask.node_id
+      ~SplitDataSetTask.numa_node
+      ~SplitDataSetTask.numpy_random_gen
+      ~SplitDataSetTask.output
+      ~SplitDataSetTask.output_deps
+      ~SplitDataSetTask.output_dirname
+      ~SplitDataSetTask.output_filename
+      ~SplitDataSetTask.output_name
+      ~SplitDataSetTask.output_root
+      ~SplitDataSetTask.partition_dims
+      ~SplitDataSetTask.partition_infos
+      ~SplitDataSetTask.partition_infos_as_dict
+      ~SplitDataSetTask.perf_metrics
+      ~SplitDataSetTask.perf_profile
+      ~SplitDataSetTask.python_random_gen
+      ~SplitDataSetTask.random_seed_bytes
+      ~SplitDataSetTask.ray_dataset_path
+      ~SplitDataSetTask.ray_marker_path
+      ~SplitDataSetTask.retry_count
+      ~SplitDataSetTask.runtime_id
+      ~SplitDataSetTask.runtime_output_abspath
+      ~SplitDataSetTask.runtime_state
+      ~SplitDataSetTask.sched_epoch
+      ~SplitDataSetTask.self_contained_output
+      ~SplitDataSetTask.skip_when_any_input_empty
+      ~SplitDataSetTask.staging_root
+      ~SplitDataSetTask.start_time
+      ~SplitDataSetTask.status
+      ~SplitDataSetTask.temp_abspath
+      ~SplitDataSetTask.temp_output
+      ~SplitDataSetTask.uniform_failure_prob
+   
+   

@@ -1,0 +1,37 @@
+﻿smallpond.logical.node.ArrowComputeNode
+=======================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: ArrowComputeNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ArrowComputeNode.__init__
+      ~ArrowComputeNode.add_perf_metrics
+      ~ArrowComputeNode.create_task
+      ~ArrowComputeNode.get_perf_stats
+      ~ArrowComputeNode.process
+      ~ArrowComputeNode.slim_copy
+      ~ArrowComputeNode.spawn
+      ~ArrowComputeNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ArrowComputeNode.default_row_group_size
+      ~ArrowComputeNode.enable_resource_boost
+      ~ArrowComputeNode.num_partitions
+   
+   

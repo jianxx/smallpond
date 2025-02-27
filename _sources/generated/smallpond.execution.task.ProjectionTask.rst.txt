@@ -1,0 +1,106 @@
+﻿smallpond.execution.task.ProjectionTask
+=======================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: ProjectionTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ProjectionTask.__init__
+      ~ProjectionTask.add_elapsed_time
+      ~ProjectionTask.adjust_row_group_size
+      ~ProjectionTask.clean_complex_attrs
+      ~ProjectionTask.clean_output
+      ~ProjectionTask.cleanup
+      ~ProjectionTask.compute_avg_row_size
+      ~ProjectionTask.dump
+      ~ProjectionTask.exec
+      ~ProjectionTask.finalize
+      ~ProjectionTask.get_partition_info
+      ~ProjectionTask.initialize
+      ~ProjectionTask.inject_fault
+      ~ProjectionTask.merge_metrics
+      ~ProjectionTask.oom
+      ~ProjectionTask.parquet_kv_metadata_bytes
+      ~ProjectionTask.parquet_kv_metadata_str
+      ~ProjectionTask.random_float
+      ~ProjectionTask.random_uint32
+      ~ProjectionTask.run
+      ~ProjectionTask.run_on_ray
+      ~ProjectionTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ProjectionTask.columns
+      ~ProjectionTask.generated_columns
+      ~ProjectionTask.union_by_name
+      ~ProjectionTask.allow_speculative_exec
+      ~ProjectionTask.any_input_empty
+      ~ProjectionTask.cpu_limit
+      ~ProjectionTask.ctx
+      ~ProjectionTask.dataset
+      ~ProjectionTask.default_output_name
+      ~ProjectionTask.elapsed_time
+      ~ProjectionTask.exception
+      ~ProjectionTask.exec_cq
+      ~ProjectionTask.exec_id
+      ~ProjectionTask.exec_on_scheduler
+      ~ProjectionTask.fail_count
+      ~ProjectionTask.final_output_abspath
+      ~ProjectionTask.finish_time
+      ~ProjectionTask.gpu_limit
+      ~ProjectionTask.id
+      ~ProjectionTask.input_datasets
+      ~ProjectionTask.input_deps
+      ~ProjectionTask.key
+      ~ProjectionTask.local_gpu
+      ~ProjectionTask.local_gpu_ranks
+      ~ProjectionTask.local_rank
+      ~ProjectionTask.location
+      ~ProjectionTask.memory_limit
+      ~ProjectionTask.node_id
+      ~ProjectionTask.numa_node
+      ~ProjectionTask.numpy_random_gen
+      ~ProjectionTask.output
+      ~ProjectionTask.output_deps
+      ~ProjectionTask.output_dirname
+      ~ProjectionTask.output_filename
+      ~ProjectionTask.output_name
+      ~ProjectionTask.output_root
+      ~ProjectionTask.partition_dims
+      ~ProjectionTask.partition_infos
+      ~ProjectionTask.partition_infos_as_dict
+      ~ProjectionTask.perf_metrics
+      ~ProjectionTask.perf_profile
+      ~ProjectionTask.python_random_gen
+      ~ProjectionTask.random_seed_bytes
+      ~ProjectionTask.ray_dataset_path
+      ~ProjectionTask.ray_marker_path
+      ~ProjectionTask.retry_count
+      ~ProjectionTask.runtime_id
+      ~ProjectionTask.runtime_output_abspath
+      ~ProjectionTask.runtime_state
+      ~ProjectionTask.sched_epoch
+      ~ProjectionTask.self_contained_output
+      ~ProjectionTask.skip_when_any_input_empty
+      ~ProjectionTask.staging_root
+      ~ProjectionTask.start_time
+      ~ProjectionTask.status
+      ~ProjectionTask.temp_abspath
+      ~ProjectionTask.temp_output
+      ~ProjectionTask.uniform_failure_prob
+   
+   

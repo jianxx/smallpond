@@ -1,0 +1,103 @@
+﻿smallpond.execution.task.RootTask
+=================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: RootTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RootTask.__init__
+      ~RootTask.add_elapsed_time
+      ~RootTask.adjust_row_group_size
+      ~RootTask.clean_complex_attrs
+      ~RootTask.clean_output
+      ~RootTask.cleanup
+      ~RootTask.compute_avg_row_size
+      ~RootTask.dump
+      ~RootTask.exec
+      ~RootTask.finalize
+      ~RootTask.get_partition_info
+      ~RootTask.initialize
+      ~RootTask.inject_fault
+      ~RootTask.merge_metrics
+      ~RootTask.oom
+      ~RootTask.parquet_kv_metadata_bytes
+      ~RootTask.parquet_kv_metadata_str
+      ~RootTask.random_float
+      ~RootTask.random_uint32
+      ~RootTask.run
+      ~RootTask.run_on_ray
+      ~RootTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RootTask.ctx
+      ~RootTask.id
+      ~RootTask.node_id
+      ~RootTask.sched_epoch
+      ~RootTask.output_name
+      ~RootTask.output_root
+      ~RootTask.dataset
+      ~RootTask.input_deps
+      ~RootTask.output_deps
+      ~RootTask.perf_metrics
+      ~RootTask.perf_profile
+      ~RootTask.runtime_state
+      ~RootTask.input_datasets
+      ~RootTask.allow_speculative_exec
+      ~RootTask.any_input_empty
+      ~RootTask.cpu_limit
+      ~RootTask.default_output_name
+      ~RootTask.elapsed_time
+      ~RootTask.exception
+      ~RootTask.exec_cq
+      ~RootTask.exec_id
+      ~RootTask.exec_on_scheduler
+      ~RootTask.fail_count
+      ~RootTask.final_output_abspath
+      ~RootTask.finish_time
+      ~RootTask.gpu_limit
+      ~RootTask.key
+      ~RootTask.local_gpu
+      ~RootTask.local_gpu_ranks
+      ~RootTask.local_rank
+      ~RootTask.location
+      ~RootTask.memory_limit
+      ~RootTask.numa_node
+      ~RootTask.numpy_random_gen
+      ~RootTask.output
+      ~RootTask.output_dirname
+      ~RootTask.output_filename
+      ~RootTask.partition_dims
+      ~RootTask.partition_infos
+      ~RootTask.partition_infos_as_dict
+      ~RootTask.python_random_gen
+      ~RootTask.random_seed_bytes
+      ~RootTask.ray_dataset_path
+      ~RootTask.ray_marker_path
+      ~RootTask.retry_count
+      ~RootTask.runtime_id
+      ~RootTask.runtime_output_abspath
+      ~RootTask.self_contained_output
+      ~RootTask.skip_when_any_input_empty
+      ~RootTask.staging_root
+      ~RootTask.start_time
+      ~RootTask.status
+      ~RootTask.temp_abspath
+      ~RootTask.temp_output
+      ~RootTask.uniform_failure_prob
+   
+   

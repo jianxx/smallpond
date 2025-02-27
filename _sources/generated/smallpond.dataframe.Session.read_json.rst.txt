@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.Session.read\_json
+======================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: Session.read_json

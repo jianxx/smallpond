@@ -1,0 +1,34 @@
+﻿smallpond.logical.node.DataSinkNode
+===================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: DataSinkNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DataSinkNode.__init__
+      ~DataSinkNode.add_perf_metrics
+      ~DataSinkNode.create_task
+      ~DataSinkNode.get_perf_stats
+      ~DataSinkNode.slim_copy
+      ~DataSinkNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DataSinkNode.enable_resource_boost
+      ~DataSinkNode.num_partitions
+   
+   

@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.Session.from\_items
+=======================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: Session.from_items

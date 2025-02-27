@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.count
+===================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.count

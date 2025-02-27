@@ -1,0 +1,132 @@
+﻿smallpond.execution.task.PandasBatchTask
+========================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: PandasBatchTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PandasBatchTask.__init__
+      ~PandasBatchTask.add_elapsed_time
+      ~PandasBatchTask.adjust_row_group_size
+      ~PandasBatchTask.clean_complex_attrs
+      ~PandasBatchTask.clean_output
+      ~PandasBatchTask.cleanup
+      ~PandasBatchTask.compute_avg_row_size
+      ~PandasBatchTask.create_input_views
+      ~PandasBatchTask.dump
+      ~PandasBatchTask.dump_output
+      ~PandasBatchTask.exec
+      ~PandasBatchTask.exec_query
+      ~PandasBatchTask.finalize
+      ~PandasBatchTask.get_partition_info
+      ~PandasBatchTask.initialize
+      ~PandasBatchTask.inject_fault
+      ~PandasBatchTask.merge_metrics
+      ~PandasBatchTask.oom
+      ~PandasBatchTask.parquet_kv_metadata_bytes
+      ~PandasBatchTask.parquet_kv_metadata_str
+      ~PandasBatchTask.prepare_connection
+      ~PandasBatchTask.process
+      ~PandasBatchTask.random_float
+      ~PandasBatchTask.random_uint32
+      ~PandasBatchTask.restore_input_state
+      ~PandasBatchTask.run
+      ~PandasBatchTask.run_on_ray
+      ~PandasBatchTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PandasBatchTask.process_func
+      ~PandasBatchTask.background_io_thread
+      ~PandasBatchTask.streaming_batch_size
+      ~PandasBatchTask.streaming_batch_count
+      ~PandasBatchTask.parquet_row_group_size
+      ~PandasBatchTask.parquet_row_group_bytes
+      ~PandasBatchTask.parquet_dictionary_encoding
+      ~PandasBatchTask.parquet_compression
+      ~PandasBatchTask.parquet_compression_level
+      ~PandasBatchTask.secs_checkpoint_interval
+      ~PandasBatchTask.allow_speculative_exec
+      ~PandasBatchTask.any_input_empty
+      ~PandasBatchTask.compression_level_str
+      ~PandasBatchTask.compression_options
+      ~PandasBatchTask.compression_type_str
+      ~PandasBatchTask.cpu_limit
+      ~PandasBatchTask.cpu_overcommit_ratio
+      ~PandasBatchTask.ctx
+      ~PandasBatchTask.dataset
+      ~PandasBatchTask.default_output_name
+      ~PandasBatchTask.elapsed_time
+      ~PandasBatchTask.enable_temp_directory
+      ~PandasBatchTask.exception
+      ~PandasBatchTask.exec_cq
+      ~PandasBatchTask.exec_id
+      ~PandasBatchTask.exec_on_scheduler
+      ~PandasBatchTask.fail_count
+      ~PandasBatchTask.final_output_abspath
+      ~PandasBatchTask.finish_time
+      ~PandasBatchTask.gpu_limit
+      ~PandasBatchTask.id
+      ~PandasBatchTask.input_datasets
+      ~PandasBatchTask.input_deps
+      ~PandasBatchTask.input_udfs
+      ~PandasBatchTask.input_view_index
+      ~PandasBatchTask.key
+      ~PandasBatchTask.local_gpu
+      ~PandasBatchTask.local_gpu_ranks
+      ~PandasBatchTask.local_rank
+      ~PandasBatchTask.location
+      ~PandasBatchTask.max_batch_size
+      ~PandasBatchTask.memory_limit
+      ~PandasBatchTask.memory_overcommit_ratio
+      ~PandasBatchTask.node_id
+      ~PandasBatchTask.numa_node
+      ~PandasBatchTask.numpy_random_gen
+      ~PandasBatchTask.output
+      ~PandasBatchTask.output_deps
+      ~PandasBatchTask.output_dirname
+      ~PandasBatchTask.output_filename
+      ~PandasBatchTask.output_name
+      ~PandasBatchTask.output_root
+      ~PandasBatchTask.partition_dims
+      ~PandasBatchTask.partition_infos
+      ~PandasBatchTask.partition_infos_as_dict
+      ~PandasBatchTask.perf_metrics
+      ~PandasBatchTask.perf_profile
+      ~PandasBatchTask.python_random_gen
+      ~PandasBatchTask.query_udfs
+      ~PandasBatchTask.rand_seed_float
+      ~PandasBatchTask.rand_seed_uint32
+      ~PandasBatchTask.random_seed_bytes
+      ~PandasBatchTask.ray_dataset_path
+      ~PandasBatchTask.ray_marker_path
+      ~PandasBatchTask.retry_count
+      ~PandasBatchTask.runtime_id
+      ~PandasBatchTask.runtime_output_abspath
+      ~PandasBatchTask.runtime_state
+      ~PandasBatchTask.sched_epoch
+      ~PandasBatchTask.self_contained_output
+      ~PandasBatchTask.skip_when_any_input_empty
+      ~PandasBatchTask.staging_root
+      ~PandasBatchTask.start_time
+      ~PandasBatchTask.status
+      ~PandasBatchTask.temp_abspath
+      ~PandasBatchTask.temp_output
+      ~PandasBatchTask.udfs
+      ~PandasBatchTask.uniform_failure_prob
+   
+   

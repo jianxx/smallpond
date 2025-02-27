@@ -1,0 +1,49 @@
+﻿smallpond.logical.dataset.JsonDataSet
+=====================================
+
+.. currentmodule:: smallpond.logical.dataset
+
+.. autoclass:: JsonDataSet
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~JsonDataSet.__init__
+      ~JsonDataSet.log
+      ~JsonDataSet.merge
+      ~JsonDataSet.partition_by_files
+      ~JsonDataSet.reset
+      ~JsonDataSet.sql_query_fragment
+      ~JsonDataSet.to_arrow_table
+      ~JsonDataSet.to_batch_reader
+      ~JsonDataSet.to_pandas
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~JsonDataSet.schema
+      ~JsonDataSet.format
+      ~JsonDataSet.max_object_size
+      ~JsonDataSet.absolute_paths
+      ~JsonDataSet.columns
+      ~JsonDataSet.empty
+      ~JsonDataSet.num_files
+      ~JsonDataSet.num_rows
+      ~JsonDataSet.paths
+      ~JsonDataSet.recursive
+      ~JsonDataSet.resolved_paths
+      ~JsonDataSet.root_dir
+      ~JsonDataSet.udfs
+      ~JsonDataSet.union_by_name
+   
+   

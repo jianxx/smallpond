@@ -1,0 +1,6 @@
+﻿smallpond.init
+==============
+
+.. currentmodule:: smallpond
+
+.. autofunction:: init

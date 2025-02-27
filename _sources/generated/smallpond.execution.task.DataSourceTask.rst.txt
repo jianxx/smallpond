@@ -1,0 +1,103 @@
+﻿smallpond.execution.task.DataSourceTask
+=======================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: DataSourceTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DataSourceTask.__init__
+      ~DataSourceTask.add_elapsed_time
+      ~DataSourceTask.adjust_row_group_size
+      ~DataSourceTask.clean_complex_attrs
+      ~DataSourceTask.clean_output
+      ~DataSourceTask.cleanup
+      ~DataSourceTask.compute_avg_row_size
+      ~DataSourceTask.dump
+      ~DataSourceTask.exec
+      ~DataSourceTask.finalize
+      ~DataSourceTask.get_partition_info
+      ~DataSourceTask.initialize
+      ~DataSourceTask.inject_fault
+      ~DataSourceTask.merge_metrics
+      ~DataSourceTask.oom
+      ~DataSourceTask.parquet_kv_metadata_bytes
+      ~DataSourceTask.parquet_kv_metadata_str
+      ~DataSourceTask.random_float
+      ~DataSourceTask.random_uint32
+      ~DataSourceTask.run
+      ~DataSourceTask.run_on_ray
+      ~DataSourceTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DataSourceTask.ctx
+      ~DataSourceTask.id
+      ~DataSourceTask.node_id
+      ~DataSourceTask.sched_epoch
+      ~DataSourceTask.output_name
+      ~DataSourceTask.output_root
+      ~DataSourceTask.dataset
+      ~DataSourceTask.input_deps
+      ~DataSourceTask.output_deps
+      ~DataSourceTask.perf_metrics
+      ~DataSourceTask.perf_profile
+      ~DataSourceTask.runtime_state
+      ~DataSourceTask.input_datasets
+      ~DataSourceTask.allow_speculative_exec
+      ~DataSourceTask.any_input_empty
+      ~DataSourceTask.cpu_limit
+      ~DataSourceTask.default_output_name
+      ~DataSourceTask.elapsed_time
+      ~DataSourceTask.exception
+      ~DataSourceTask.exec_cq
+      ~DataSourceTask.exec_id
+      ~DataSourceTask.exec_on_scheduler
+      ~DataSourceTask.fail_count
+      ~DataSourceTask.final_output_abspath
+      ~DataSourceTask.finish_time
+      ~DataSourceTask.gpu_limit
+      ~DataSourceTask.key
+      ~DataSourceTask.local_gpu
+      ~DataSourceTask.local_gpu_ranks
+      ~DataSourceTask.local_rank
+      ~DataSourceTask.location
+      ~DataSourceTask.memory_limit
+      ~DataSourceTask.numa_node
+      ~DataSourceTask.numpy_random_gen
+      ~DataSourceTask.output
+      ~DataSourceTask.output_dirname
+      ~DataSourceTask.output_filename
+      ~DataSourceTask.partition_dims
+      ~DataSourceTask.partition_infos
+      ~DataSourceTask.partition_infos_as_dict
+      ~DataSourceTask.python_random_gen
+      ~DataSourceTask.random_seed_bytes
+      ~DataSourceTask.ray_dataset_path
+      ~DataSourceTask.ray_marker_path
+      ~DataSourceTask.retry_count
+      ~DataSourceTask.runtime_id
+      ~DataSourceTask.runtime_output_abspath
+      ~DataSourceTask.self_contained_output
+      ~DataSourceTask.skip_when_any_input_empty
+      ~DataSourceTask.staging_root
+      ~DataSourceTask.start_time
+      ~DataSourceTask.status
+      ~DataSourceTask.temp_abspath
+      ~DataSourceTask.temp_output
+      ~DataSourceTask.uniform_failure_prob
+   
+   

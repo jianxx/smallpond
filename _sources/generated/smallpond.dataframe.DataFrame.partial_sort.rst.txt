@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.partial\_sort
+===========================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.partial_sort

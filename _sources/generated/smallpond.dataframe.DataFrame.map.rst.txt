@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.map
+=================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.map

@@ -1,0 +1,40 @@
+﻿smallpond.logical.node.EvenlyDistributedPartitionNode
+=====================================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: EvenlyDistributedPartitionNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~EvenlyDistributedPartitionNode.__init__
+      ~EvenlyDistributedPartitionNode.add_perf_metrics
+      ~EvenlyDistributedPartitionNode.create_consumer_task
+      ~EvenlyDistributedPartitionNode.create_merge_task
+      ~EvenlyDistributedPartitionNode.create_producer_task
+      ~EvenlyDistributedPartitionNode.create_split_task
+      ~EvenlyDistributedPartitionNode.create_task
+      ~EvenlyDistributedPartitionNode.get_perf_stats
+      ~EvenlyDistributedPartitionNode.slim_copy
+      ~EvenlyDistributedPartitionNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~EvenlyDistributedPartitionNode.enable_resource_boost
+      ~EvenlyDistributedPartitionNode.max_card_of_producers_x_consumers
+      ~EvenlyDistributedPartitionNode.max_num_producer_tasks
+      ~EvenlyDistributedPartitionNode.num_partitions
+   
+   

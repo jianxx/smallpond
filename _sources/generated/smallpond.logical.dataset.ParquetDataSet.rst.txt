@@ -1,0 +1,54 @@
+﻿smallpond.logical.dataset.ParquetDataSet
+========================================
+
+.. currentmodule:: smallpond.logical.dataset
+
+.. autoclass:: ParquetDataSet
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ParquetDataSet.__init__
+      ~ParquetDataSet.create_from
+      ~ParquetDataSet.load_partitioned_datasets
+      ~ParquetDataSet.log
+      ~ParquetDataSet.merge
+      ~ParquetDataSet.partition_by_files
+      ~ParquetDataSet.partition_by_rows
+      ~ParquetDataSet.partition_by_size
+      ~ParquetDataSet.remove_empty_files
+      ~ParquetDataSet.reset
+      ~ParquetDataSet.sql_query_fragment
+      ~ParquetDataSet.to_arrow_table
+      ~ParquetDataSet.to_batch_reader
+      ~ParquetDataSet.to_pandas
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ParquetDataSet.generated_columns
+      ~ParquetDataSet.absolute_paths
+      ~ParquetDataSet.columns
+      ~ParquetDataSet.empty
+      ~ParquetDataSet.estimated_data_size
+      ~ParquetDataSet.num_files
+      ~ParquetDataSet.num_rows
+      ~ParquetDataSet.paths
+      ~ParquetDataSet.recursive
+      ~ParquetDataSet.resolved_paths
+      ~ParquetDataSet.resolved_row_ranges
+      ~ParquetDataSet.root_dir
+      ~ParquetDataSet.udfs
+      ~ParquetDataSet.union_by_name
+   
+   

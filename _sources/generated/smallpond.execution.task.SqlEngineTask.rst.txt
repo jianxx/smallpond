@@ -1,0 +1,131 @@
+﻿smallpond.execution.task.SqlEngineTask
+======================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: SqlEngineTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SqlEngineTask.__init__
+      ~SqlEngineTask.add_elapsed_time
+      ~SqlEngineTask.adjust_row_group_size
+      ~SqlEngineTask.clean_complex_attrs
+      ~SqlEngineTask.clean_output
+      ~SqlEngineTask.cleanup
+      ~SqlEngineTask.compute_avg_row_size
+      ~SqlEngineTask.create_input_views
+      ~SqlEngineTask.dump
+      ~SqlEngineTask.exec
+      ~SqlEngineTask.exec_query
+      ~SqlEngineTask.finalize
+      ~SqlEngineTask.get_partition_info
+      ~SqlEngineTask.initialize
+      ~SqlEngineTask.inject_fault
+      ~SqlEngineTask.merge_metrics
+      ~SqlEngineTask.oom
+      ~SqlEngineTask.parquet_kv_metadata_bytes
+      ~SqlEngineTask.parquet_kv_metadata_str
+      ~SqlEngineTask.prepare_connection
+      ~SqlEngineTask.process_batch
+      ~SqlEngineTask.random_float
+      ~SqlEngineTask.random_uint32
+      ~SqlEngineTask.run
+      ~SqlEngineTask.run_on_ray
+      ~SqlEngineTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SqlEngineTask.sql_queries
+      ~SqlEngineTask.per_thread_output
+      ~SqlEngineTask.materialize_output
+      ~SqlEngineTask.materialize_in_memory
+      ~SqlEngineTask.batched_processing
+      ~SqlEngineTask.parquet_row_group_size
+      ~SqlEngineTask.parquet_row_group_bytes
+      ~SqlEngineTask.parquet_dictionary_encoding
+      ~SqlEngineTask.parquet_compression
+      ~SqlEngineTask.parquet_compression_level
+      ~SqlEngineTask.allow_speculative_exec
+      ~SqlEngineTask.any_input_empty
+      ~SqlEngineTask.compression_level_str
+      ~SqlEngineTask.compression_options
+      ~SqlEngineTask.compression_type_str
+      ~SqlEngineTask.cpu_limit
+      ~SqlEngineTask.cpu_overcommit_ratio
+      ~SqlEngineTask.ctx
+      ~SqlEngineTask.dataset
+      ~SqlEngineTask.default_output_name
+      ~SqlEngineTask.elapsed_time
+      ~SqlEngineTask.enable_temp_directory
+      ~SqlEngineTask.exception
+      ~SqlEngineTask.exec_cq
+      ~SqlEngineTask.exec_id
+      ~SqlEngineTask.exec_on_scheduler
+      ~SqlEngineTask.fail_count
+      ~SqlEngineTask.final_output_abspath
+      ~SqlEngineTask.finish_time
+      ~SqlEngineTask.gpu_limit
+      ~SqlEngineTask.id
+      ~SqlEngineTask.input_datasets
+      ~SqlEngineTask.input_deps
+      ~SqlEngineTask.input_udfs
+      ~SqlEngineTask.input_view_index
+      ~SqlEngineTask.key
+      ~SqlEngineTask.local_gpu
+      ~SqlEngineTask.local_gpu_ranks
+      ~SqlEngineTask.local_rank
+      ~SqlEngineTask.location
+      ~SqlEngineTask.max_batch_size
+      ~SqlEngineTask.memory_limit
+      ~SqlEngineTask.memory_overcommit_ratio
+      ~SqlEngineTask.node_id
+      ~SqlEngineTask.numa_node
+      ~SqlEngineTask.numpy_random_gen
+      ~SqlEngineTask.oneline_query
+      ~SqlEngineTask.output
+      ~SqlEngineTask.output_deps
+      ~SqlEngineTask.output_dirname
+      ~SqlEngineTask.output_filename
+      ~SqlEngineTask.output_name
+      ~SqlEngineTask.output_root
+      ~SqlEngineTask.partition_dims
+      ~SqlEngineTask.partition_infos
+      ~SqlEngineTask.partition_infos_as_dict
+      ~SqlEngineTask.perf_metrics
+      ~SqlEngineTask.perf_profile
+      ~SqlEngineTask.python_random_gen
+      ~SqlEngineTask.query_udfs
+      ~SqlEngineTask.rand_seed_float
+      ~SqlEngineTask.rand_seed_uint32
+      ~SqlEngineTask.random_seed_bytes
+      ~SqlEngineTask.ray_dataset_path
+      ~SqlEngineTask.ray_marker_path
+      ~SqlEngineTask.retry_count
+      ~SqlEngineTask.runtime_id
+      ~SqlEngineTask.runtime_output_abspath
+      ~SqlEngineTask.runtime_state
+      ~SqlEngineTask.sched_epoch
+      ~SqlEngineTask.self_contained_output
+      ~SqlEngineTask.skip_when_any_input_empty
+      ~SqlEngineTask.staging_root
+      ~SqlEngineTask.start_time
+      ~SqlEngineTask.status
+      ~SqlEngineTask.temp_abspath
+      ~SqlEngineTask.temp_output
+      ~SqlEngineTask.udfs
+      ~SqlEngineTask.uniform_failure_prob
+   
+   

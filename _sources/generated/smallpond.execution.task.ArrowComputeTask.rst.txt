@@ -1,0 +1,127 @@
+﻿smallpond.execution.task.ArrowComputeTask
+=========================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: ArrowComputeTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ArrowComputeTask.__init__
+      ~ArrowComputeTask.add_elapsed_time
+      ~ArrowComputeTask.adjust_row_group_size
+      ~ArrowComputeTask.clean_complex_attrs
+      ~ArrowComputeTask.clean_output
+      ~ArrowComputeTask.cleanup
+      ~ArrowComputeTask.compute_avg_row_size
+      ~ArrowComputeTask.create_input_views
+      ~ArrowComputeTask.dump
+      ~ArrowComputeTask.dump_output
+      ~ArrowComputeTask.exec
+      ~ArrowComputeTask.exec_query
+      ~ArrowComputeTask.finalize
+      ~ArrowComputeTask.get_partition_info
+      ~ArrowComputeTask.initialize
+      ~ArrowComputeTask.inject_fault
+      ~ArrowComputeTask.merge_metrics
+      ~ArrowComputeTask.oom
+      ~ArrowComputeTask.parquet_kv_metadata_bytes
+      ~ArrowComputeTask.parquet_kv_metadata_str
+      ~ArrowComputeTask.prepare_connection
+      ~ArrowComputeTask.process
+      ~ArrowComputeTask.random_float
+      ~ArrowComputeTask.random_uint32
+      ~ArrowComputeTask.run
+      ~ArrowComputeTask.run_on_ray
+      ~ArrowComputeTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ArrowComputeTask.process_func
+      ~ArrowComputeTask.parquet_row_group_size
+      ~ArrowComputeTask.parquet_row_group_bytes
+      ~ArrowComputeTask.parquet_dictionary_encoding
+      ~ArrowComputeTask.use_duckdb_reader
+      ~ArrowComputeTask.allow_speculative_exec
+      ~ArrowComputeTask.any_input_empty
+      ~ArrowComputeTask.compression_level_str
+      ~ArrowComputeTask.compression_options
+      ~ArrowComputeTask.compression_type_str
+      ~ArrowComputeTask.cpu_limit
+      ~ArrowComputeTask.cpu_overcommit_ratio
+      ~ArrowComputeTask.ctx
+      ~ArrowComputeTask.dataset
+      ~ArrowComputeTask.default_output_name
+      ~ArrowComputeTask.elapsed_time
+      ~ArrowComputeTask.enable_temp_directory
+      ~ArrowComputeTask.exception
+      ~ArrowComputeTask.exec_cq
+      ~ArrowComputeTask.exec_id
+      ~ArrowComputeTask.exec_on_scheduler
+      ~ArrowComputeTask.fail_count
+      ~ArrowComputeTask.final_output_abspath
+      ~ArrowComputeTask.finish_time
+      ~ArrowComputeTask.gpu_limit
+      ~ArrowComputeTask.id
+      ~ArrowComputeTask.input_datasets
+      ~ArrowComputeTask.input_deps
+      ~ArrowComputeTask.input_udfs
+      ~ArrowComputeTask.input_view_index
+      ~ArrowComputeTask.key
+      ~ArrowComputeTask.local_gpu
+      ~ArrowComputeTask.local_gpu_ranks
+      ~ArrowComputeTask.local_rank
+      ~ArrowComputeTask.location
+      ~ArrowComputeTask.memory_limit
+      ~ArrowComputeTask.memory_overcommit_ratio
+      ~ArrowComputeTask.node_id
+      ~ArrowComputeTask.numa_node
+      ~ArrowComputeTask.numpy_random_gen
+      ~ArrowComputeTask.output
+      ~ArrowComputeTask.output_deps
+      ~ArrowComputeTask.output_dirname
+      ~ArrowComputeTask.output_filename
+      ~ArrowComputeTask.output_name
+      ~ArrowComputeTask.output_root
+      ~ArrowComputeTask.parquet_compression
+      ~ArrowComputeTask.parquet_compression_level
+      ~ArrowComputeTask.partition_dims
+      ~ArrowComputeTask.partition_infos
+      ~ArrowComputeTask.partition_infos_as_dict
+      ~ArrowComputeTask.perf_metrics
+      ~ArrowComputeTask.perf_profile
+      ~ArrowComputeTask.python_random_gen
+      ~ArrowComputeTask.query_udfs
+      ~ArrowComputeTask.rand_seed_float
+      ~ArrowComputeTask.rand_seed_uint32
+      ~ArrowComputeTask.random_seed_bytes
+      ~ArrowComputeTask.ray_dataset_path
+      ~ArrowComputeTask.ray_marker_path
+      ~ArrowComputeTask.retry_count
+      ~ArrowComputeTask.runtime_id
+      ~ArrowComputeTask.runtime_output_abspath
+      ~ArrowComputeTask.runtime_state
+      ~ArrowComputeTask.sched_epoch
+      ~ArrowComputeTask.self_contained_output
+      ~ArrowComputeTask.skip_when_any_input_empty
+      ~ArrowComputeTask.staging_root
+      ~ArrowComputeTask.start_time
+      ~ArrowComputeTask.status
+      ~ArrowComputeTask.temp_abspath
+      ~ArrowComputeTask.temp_output
+      ~ArrowComputeTask.udfs
+      ~ArrowComputeTask.uniform_failure_prob
+   
+   

@@ -1,0 +1,50 @@
+﻿smallpond.execution.task.RuntimeContext
+=======================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: RuntimeContext
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RuntimeContext.__init__
+      ~RuntimeContext.cleanup
+      ~RuntimeContext.cleanup_root
+      ~RuntimeContext.get_local_gpus
+      ~RuntimeContext.initialize
+      ~RuntimeContext.new_task_id
+      ~RuntimeContext.set_current_task
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RuntimeContext.available_memory
+      ~RuntimeContext.exec_plan_path
+      ~RuntimeContext.job_root_dirname
+      ~RuntimeContext.job_status_path
+      ~RuntimeContext.logcial_plan_graph_path
+      ~RuntimeContext.logcial_plan_path
+      ~RuntimeContext.numa_node_count
+      ~RuntimeContext.physical_cpu_count
+      ~RuntimeContext.ray_log_path
+      ~RuntimeContext.runtime_ctx_path
+      ~RuntimeContext.sched_state_path
+      ~RuntimeContext.secs_executor_probe_timeout
+      ~RuntimeContext.task
+      ~RuntimeContext.total_memory
+      ~RuntimeContext.usable_cpu_count
+      ~RuntimeContext.usable_gpu_count
+      ~RuntimeContext.usable_memory_size
+   
+   

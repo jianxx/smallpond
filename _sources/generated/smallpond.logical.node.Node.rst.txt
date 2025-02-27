@@ -1,0 +1,34 @@
+﻿smallpond.logical.node.Node
+===========================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: Node
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Node.__init__
+      ~Node.add_perf_metrics
+      ~Node.create_task
+      ~Node.get_perf_stats
+      ~Node.slim_copy
+      ~Node.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Node.enable_resource_boost
+      ~Node.num_partitions
+   
+   

@@ -1,0 +1,38 @@
+﻿smallpond.execution.task.PerfStats
+==================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: PerfStats
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PerfStats.__init__
+      ~PerfStats.count
+      ~PerfStats.index
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PerfStats.avg
+      ~PerfStats.cnt
+      ~PerfStats.max
+      ~PerfStats.min
+      ~PerfStats.p50
+      ~PerfStats.p75
+      ~PerfStats.p95
+      ~PerfStats.p99
+      ~PerfStats.sum
+   
+   

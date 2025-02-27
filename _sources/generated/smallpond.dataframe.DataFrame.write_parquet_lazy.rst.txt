@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.write\_parquet\_lazy
+==================================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.write_parquet_lazy

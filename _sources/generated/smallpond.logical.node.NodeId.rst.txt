@@ -1,0 +1,36 @@
+﻿smallpond.logical.node.NodeId
+=============================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: NodeId
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~NodeId.__init__
+      ~NodeId.as_integer_ratio
+      ~NodeId.bit_length
+      ~NodeId.conjugate
+      ~NodeId.from_bytes
+      ~NodeId.to_bytes
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~NodeId.denominator
+      ~NodeId.imag
+      ~NodeId.numerator
+      ~NodeId.real
+   
+   

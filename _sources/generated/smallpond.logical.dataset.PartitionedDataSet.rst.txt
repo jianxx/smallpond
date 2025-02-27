@@ -1,0 +1,47 @@
+﻿smallpond.logical.dataset.PartitionedDataSet
+============================================
+
+.. currentmodule:: smallpond.logical.dataset
+
+.. autoclass:: PartitionedDataSet
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PartitionedDataSet.__init__
+      ~PartitionedDataSet.log
+      ~PartitionedDataSet.merge
+      ~PartitionedDataSet.partition_by_files
+      ~PartitionedDataSet.reset
+      ~PartitionedDataSet.sql_query_fragment
+      ~PartitionedDataSet.to_arrow_table
+      ~PartitionedDataSet.to_batch_reader
+      ~PartitionedDataSet.to_pandas
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PartitionedDataSet.datasets
+      ~PartitionedDataSet.absolute_paths
+      ~PartitionedDataSet.columns
+      ~PartitionedDataSet.empty
+      ~PartitionedDataSet.num_files
+      ~PartitionedDataSet.num_rows
+      ~PartitionedDataSet.paths
+      ~PartitionedDataSet.recursive
+      ~PartitionedDataSet.resolved_paths
+      ~PartitionedDataSet.root_dir
+      ~PartitionedDataSet.udfs
+      ~PartitionedDataSet.union_by_name
+   
+   

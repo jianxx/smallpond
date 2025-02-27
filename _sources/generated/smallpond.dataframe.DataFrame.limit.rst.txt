@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.limit
+===================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.limit

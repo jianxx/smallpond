@@ -1,0 +1,34 @@
+﻿smallpond.logical.node.ConsolidateNode
+======================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: ConsolidateNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ConsolidateNode.__init__
+      ~ConsolidateNode.add_perf_metrics
+      ~ConsolidateNode.create_task
+      ~ConsolidateNode.get_perf_stats
+      ~ConsolidateNode.slim_copy
+      ~ConsolidateNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ConsolidateNode.enable_resource_boost
+      ~ConsolidateNode.num_partitions
+   
+   

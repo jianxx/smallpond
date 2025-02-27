@@ -1,0 +1,75 @@
+﻿smallpond.execution.scheduler.Scheduler
+=======================================
+
+.. currentmodule:: smallpond.execution.scheduler
+
+.. autoclass:: Scheduler
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Scheduler.__init__
+      ~Scheduler.add_state_observer
+      ~Scheduler.clean_temp_files
+      ~Scheduler.clear_cached_executor_lists
+      ~Scheduler.copy_task_for_execution
+      ~Scheduler.dispatch_tasks
+      ~Scheduler.export_task_metrics
+      ~Scheduler.export_timeline_figs
+      ~Scheduler.get_retry_task
+      ~Scheduler.get_runnable_tasks
+      ~Scheduler.log_current_status
+      ~Scheduler.log_overall_progress
+      ~Scheduler.notify_state_observers
+      ~Scheduler.probe_executors
+      ~Scheduler.process_finished_tasks
+      ~Scheduler.run
+      ~Scheduler.save_task_final_state
+      ~Scheduler.sched_loop
+      ~Scheduler.start_speculative_execution
+      ~Scheduler.stop_executors
+      ~Scheduler.stop_running_tasks
+      ~Scheduler.suspend_good_executors
+      ~Scheduler.try_boost_resource
+      ~Scheduler.try_enqueue
+      ~Scheduler.try_relax_memory_limit
+      ~Scheduler.update_executor_states
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Scheduler.StateCallback
+      ~Scheduler.abandoned_tasks
+      ~Scheduler.alive_executors
+      ~Scheduler.elapsed_time
+      ~Scheduler.failed_executors
+      ~Scheduler.good_executors
+      ~Scheduler.large_num_nontrivial_tasks
+      ~Scheduler.large_runtime_state
+      ~Scheduler.local_executors
+      ~Scheduler.low_resource_executors
+      ~Scheduler.num_local_running_works
+      ~Scheduler.num_pending_nontrivial_tasks
+      ~Scheduler.num_pending_tasks
+      ~Scheduler.num_running_works
+      ~Scheduler.pending_nontrivial_tasks
+      ~Scheduler.progress
+      ~Scheduler.remote_executors
+      ~Scheduler.running_works
+      ~Scheduler.stopped_executors
+      ~Scheduler.stopping_executors
+      ~Scheduler.succeeded_task_ids
+      ~Scheduler.success
+      ~Scheduler.working_executors
+   
+   

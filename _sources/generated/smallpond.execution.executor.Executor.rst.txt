@@ -1,0 +1,39 @@
+﻿smallpond.execution.executor.Executor
+=====================================
+
+.. currentmodule:: smallpond.execution.executor
+
+.. autoclass:: Executor
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Executor.__init__
+      ~Executor.acquire_gpu
+      ~Executor.collect_finished_works
+      ~Executor.create
+      ~Executor.exec_loop
+      ~Executor.process_work
+      ~Executor.release_gpu
+      ~Executor.run
+      ~Executor.skip_probes
+      ~Executor.stop
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Executor.available_gpu_quota
+      ~Executor.busy
+      ~Executor.local_gpus
+   
+   

@@ -1,0 +1,132 @@
+﻿smallpond.execution.task.ArrowStreamTask
+========================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: ArrowStreamTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ArrowStreamTask.__init__
+      ~ArrowStreamTask.add_elapsed_time
+      ~ArrowStreamTask.adjust_row_group_size
+      ~ArrowStreamTask.clean_complex_attrs
+      ~ArrowStreamTask.clean_output
+      ~ArrowStreamTask.cleanup
+      ~ArrowStreamTask.compute_avg_row_size
+      ~ArrowStreamTask.create_input_views
+      ~ArrowStreamTask.dump
+      ~ArrowStreamTask.dump_output
+      ~ArrowStreamTask.exec
+      ~ArrowStreamTask.exec_query
+      ~ArrowStreamTask.finalize
+      ~ArrowStreamTask.get_partition_info
+      ~ArrowStreamTask.initialize
+      ~ArrowStreamTask.inject_fault
+      ~ArrowStreamTask.merge_metrics
+      ~ArrowStreamTask.oom
+      ~ArrowStreamTask.parquet_kv_metadata_bytes
+      ~ArrowStreamTask.parquet_kv_metadata_str
+      ~ArrowStreamTask.prepare_connection
+      ~ArrowStreamTask.process
+      ~ArrowStreamTask.random_float
+      ~ArrowStreamTask.random_uint32
+      ~ArrowStreamTask.restore_input_state
+      ~ArrowStreamTask.run
+      ~ArrowStreamTask.run_on_ray
+      ~ArrowStreamTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ArrowStreamTask.process_func
+      ~ArrowStreamTask.background_io_thread
+      ~ArrowStreamTask.streaming_batch_size
+      ~ArrowStreamTask.streaming_batch_count
+      ~ArrowStreamTask.parquet_row_group_size
+      ~ArrowStreamTask.parquet_row_group_bytes
+      ~ArrowStreamTask.parquet_dictionary_encoding
+      ~ArrowStreamTask.parquet_compression
+      ~ArrowStreamTask.parquet_compression_level
+      ~ArrowStreamTask.secs_checkpoint_interval
+      ~ArrowStreamTask.allow_speculative_exec
+      ~ArrowStreamTask.any_input_empty
+      ~ArrowStreamTask.compression_level_str
+      ~ArrowStreamTask.compression_options
+      ~ArrowStreamTask.compression_type_str
+      ~ArrowStreamTask.cpu_limit
+      ~ArrowStreamTask.cpu_overcommit_ratio
+      ~ArrowStreamTask.ctx
+      ~ArrowStreamTask.dataset
+      ~ArrowStreamTask.default_output_name
+      ~ArrowStreamTask.elapsed_time
+      ~ArrowStreamTask.enable_temp_directory
+      ~ArrowStreamTask.exception
+      ~ArrowStreamTask.exec_cq
+      ~ArrowStreamTask.exec_id
+      ~ArrowStreamTask.exec_on_scheduler
+      ~ArrowStreamTask.fail_count
+      ~ArrowStreamTask.final_output_abspath
+      ~ArrowStreamTask.finish_time
+      ~ArrowStreamTask.gpu_limit
+      ~ArrowStreamTask.id
+      ~ArrowStreamTask.input_datasets
+      ~ArrowStreamTask.input_deps
+      ~ArrowStreamTask.input_udfs
+      ~ArrowStreamTask.input_view_index
+      ~ArrowStreamTask.key
+      ~ArrowStreamTask.local_gpu
+      ~ArrowStreamTask.local_gpu_ranks
+      ~ArrowStreamTask.local_rank
+      ~ArrowStreamTask.location
+      ~ArrowStreamTask.max_batch_size
+      ~ArrowStreamTask.memory_limit
+      ~ArrowStreamTask.memory_overcommit_ratio
+      ~ArrowStreamTask.node_id
+      ~ArrowStreamTask.numa_node
+      ~ArrowStreamTask.numpy_random_gen
+      ~ArrowStreamTask.output
+      ~ArrowStreamTask.output_deps
+      ~ArrowStreamTask.output_dirname
+      ~ArrowStreamTask.output_filename
+      ~ArrowStreamTask.output_name
+      ~ArrowStreamTask.output_root
+      ~ArrowStreamTask.partition_dims
+      ~ArrowStreamTask.partition_infos
+      ~ArrowStreamTask.partition_infos_as_dict
+      ~ArrowStreamTask.perf_metrics
+      ~ArrowStreamTask.perf_profile
+      ~ArrowStreamTask.python_random_gen
+      ~ArrowStreamTask.query_udfs
+      ~ArrowStreamTask.rand_seed_float
+      ~ArrowStreamTask.rand_seed_uint32
+      ~ArrowStreamTask.random_seed_bytes
+      ~ArrowStreamTask.ray_dataset_path
+      ~ArrowStreamTask.ray_marker_path
+      ~ArrowStreamTask.retry_count
+      ~ArrowStreamTask.runtime_id
+      ~ArrowStreamTask.runtime_output_abspath
+      ~ArrowStreamTask.runtime_state
+      ~ArrowStreamTask.sched_epoch
+      ~ArrowStreamTask.self_contained_output
+      ~ArrowStreamTask.skip_when_any_input_empty
+      ~ArrowStreamTask.staging_root
+      ~ArrowStreamTask.start_time
+      ~ArrowStreamTask.status
+      ~ArrowStreamTask.temp_abspath
+      ~ArrowStreamTask.temp_output
+      ~ArrowStreamTask.udfs
+      ~ArrowStreamTask.uniform_failure_prob
+   
+   

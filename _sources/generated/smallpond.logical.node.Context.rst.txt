@@ -1,0 +1,25 @@
+﻿smallpond.logical.node.Context
+==============================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: Context
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Context.__init__
+      ~Context.create_duckdb_extension
+      ~Context.create_external_module
+      ~Context.create_function
+   
+   
+
+   
+   
+   

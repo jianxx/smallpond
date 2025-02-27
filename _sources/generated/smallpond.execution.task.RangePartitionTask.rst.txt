@@ -1,0 +1,103 @@
+﻿smallpond.execution.task.RangePartitionTask
+===========================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: RangePartitionTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RangePartitionTask.__init__
+      ~RangePartitionTask.add_elapsed_time
+      ~RangePartitionTask.adjust_row_group_size
+      ~RangePartitionTask.clean_complex_attrs
+      ~RangePartitionTask.clean_output
+      ~RangePartitionTask.cleanup
+      ~RangePartitionTask.compute_avg_row_size
+      ~RangePartitionTask.dump
+      ~RangePartitionTask.exec
+      ~RangePartitionTask.finalize
+      ~RangePartitionTask.get_partition_info
+      ~RangePartitionTask.initialize
+      ~RangePartitionTask.inject_fault
+      ~RangePartitionTask.merge_metrics
+      ~RangePartitionTask.oom
+      ~RangePartitionTask.parquet_kv_metadata_bytes
+      ~RangePartitionTask.parquet_kv_metadata_str
+      ~RangePartitionTask.random_float
+      ~RangePartitionTask.random_uint32
+      ~RangePartitionTask.run
+      ~RangePartitionTask.run_on_ray
+      ~RangePartitionTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RangePartitionTask.ctx
+      ~RangePartitionTask.id
+      ~RangePartitionTask.node_id
+      ~RangePartitionTask.sched_epoch
+      ~RangePartitionTask.output_name
+      ~RangePartitionTask.output_root
+      ~RangePartitionTask.dataset
+      ~RangePartitionTask.input_deps
+      ~RangePartitionTask.output_deps
+      ~RangePartitionTask.perf_metrics
+      ~RangePartitionTask.perf_profile
+      ~RangePartitionTask.runtime_state
+      ~RangePartitionTask.input_datasets
+      ~RangePartitionTask.allow_speculative_exec
+      ~RangePartitionTask.any_input_empty
+      ~RangePartitionTask.cpu_limit
+      ~RangePartitionTask.default_output_name
+      ~RangePartitionTask.elapsed_time
+      ~RangePartitionTask.exception
+      ~RangePartitionTask.exec_cq
+      ~RangePartitionTask.exec_id
+      ~RangePartitionTask.exec_on_scheduler
+      ~RangePartitionTask.fail_count
+      ~RangePartitionTask.final_output_abspath
+      ~RangePartitionTask.finish_time
+      ~RangePartitionTask.gpu_limit
+      ~RangePartitionTask.key
+      ~RangePartitionTask.local_gpu
+      ~RangePartitionTask.local_gpu_ranks
+      ~RangePartitionTask.local_rank
+      ~RangePartitionTask.location
+      ~RangePartitionTask.memory_limit
+      ~RangePartitionTask.numa_node
+      ~RangePartitionTask.numpy_random_gen
+      ~RangePartitionTask.output
+      ~RangePartitionTask.output_dirname
+      ~RangePartitionTask.output_filename
+      ~RangePartitionTask.partition_dims
+      ~RangePartitionTask.partition_infos
+      ~RangePartitionTask.partition_infos_as_dict
+      ~RangePartitionTask.python_random_gen
+      ~RangePartitionTask.random_seed_bytes
+      ~RangePartitionTask.ray_dataset_path
+      ~RangePartitionTask.ray_marker_path
+      ~RangePartitionTask.retry_count
+      ~RangePartitionTask.runtime_id
+      ~RangePartitionTask.runtime_output_abspath
+      ~RangePartitionTask.self_contained_output
+      ~RangePartitionTask.skip_when_any_input_empty
+      ~RangePartitionTask.staging_root
+      ~RangePartitionTask.start_time
+      ~RangePartitionTask.status
+      ~RangePartitionTask.temp_abspath
+      ~RangePartitionTask.temp_output
+      ~RangePartitionTask.uniform_failure_prob
+   
+   

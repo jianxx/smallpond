@@ -1,0 +1,41 @@
+﻿smallpond.logical.node.UserDefinedPartitionNode
+===============================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: UserDefinedPartitionNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~UserDefinedPartitionNode.__init__
+      ~UserDefinedPartitionNode.add_perf_metrics
+      ~UserDefinedPartitionNode.create_consumer_task
+      ~UserDefinedPartitionNode.create_merge_task
+      ~UserDefinedPartitionNode.create_producer_task
+      ~UserDefinedPartitionNode.create_split_task
+      ~UserDefinedPartitionNode.create_task
+      ~UserDefinedPartitionNode.get_perf_stats
+      ~UserDefinedPartitionNode.partition
+      ~UserDefinedPartitionNode.slim_copy
+      ~UserDefinedPartitionNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~UserDefinedPartitionNode.enable_resource_boost
+      ~UserDefinedPartitionNode.max_card_of_producers_x_consumers
+      ~UserDefinedPartitionNode.max_num_producer_tasks
+      ~UserDefinedPartitionNode.num_partitions
+   
+   

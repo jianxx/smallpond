@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.random\_shuffle
+=============================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.random_shuffle

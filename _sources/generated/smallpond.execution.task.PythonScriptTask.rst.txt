@@ -1,0 +1,122 @@
+﻿smallpond.execution.task.PythonScriptTask
+=========================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: PythonScriptTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PythonScriptTask.__init__
+      ~PythonScriptTask.add_elapsed_time
+      ~PythonScriptTask.adjust_row_group_size
+      ~PythonScriptTask.clean_complex_attrs
+      ~PythonScriptTask.clean_output
+      ~PythonScriptTask.cleanup
+      ~PythonScriptTask.compute_avg_row_size
+      ~PythonScriptTask.create_input_views
+      ~PythonScriptTask.dump
+      ~PythonScriptTask.exec
+      ~PythonScriptTask.exec_query
+      ~PythonScriptTask.finalize
+      ~PythonScriptTask.get_partition_info
+      ~PythonScriptTask.initialize
+      ~PythonScriptTask.inject_fault
+      ~PythonScriptTask.merge_metrics
+      ~PythonScriptTask.oom
+      ~PythonScriptTask.parquet_kv_metadata_bytes
+      ~PythonScriptTask.parquet_kv_metadata_str
+      ~PythonScriptTask.prepare_connection
+      ~PythonScriptTask.process
+      ~PythonScriptTask.random_float
+      ~PythonScriptTask.random_uint32
+      ~PythonScriptTask.run
+      ~PythonScriptTask.run_on_ray
+      ~PythonScriptTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PythonScriptTask.process_func
+      ~PythonScriptTask.allow_speculative_exec
+      ~PythonScriptTask.any_input_empty
+      ~PythonScriptTask.compression_level_str
+      ~PythonScriptTask.compression_options
+      ~PythonScriptTask.compression_type_str
+      ~PythonScriptTask.cpu_limit
+      ~PythonScriptTask.cpu_overcommit_ratio
+      ~PythonScriptTask.ctx
+      ~PythonScriptTask.dataset
+      ~PythonScriptTask.default_output_name
+      ~PythonScriptTask.elapsed_time
+      ~PythonScriptTask.enable_temp_directory
+      ~PythonScriptTask.exception
+      ~PythonScriptTask.exec_cq
+      ~PythonScriptTask.exec_id
+      ~PythonScriptTask.exec_on_scheduler
+      ~PythonScriptTask.fail_count
+      ~PythonScriptTask.final_output_abspath
+      ~PythonScriptTask.finish_time
+      ~PythonScriptTask.gpu_limit
+      ~PythonScriptTask.id
+      ~PythonScriptTask.input_datasets
+      ~PythonScriptTask.input_deps
+      ~PythonScriptTask.input_udfs
+      ~PythonScriptTask.input_view_index
+      ~PythonScriptTask.key
+      ~PythonScriptTask.local_gpu
+      ~PythonScriptTask.local_gpu_ranks
+      ~PythonScriptTask.local_rank
+      ~PythonScriptTask.location
+      ~PythonScriptTask.memory_limit
+      ~PythonScriptTask.memory_overcommit_ratio
+      ~PythonScriptTask.node_id
+      ~PythonScriptTask.numa_node
+      ~PythonScriptTask.numpy_random_gen
+      ~PythonScriptTask.output
+      ~PythonScriptTask.output_deps
+      ~PythonScriptTask.output_dirname
+      ~PythonScriptTask.output_filename
+      ~PythonScriptTask.output_name
+      ~PythonScriptTask.output_root
+      ~PythonScriptTask.parquet_compression
+      ~PythonScriptTask.parquet_compression_level
+      ~PythonScriptTask.partition_dims
+      ~PythonScriptTask.partition_infos
+      ~PythonScriptTask.partition_infos_as_dict
+      ~PythonScriptTask.perf_metrics
+      ~PythonScriptTask.perf_profile
+      ~PythonScriptTask.python_random_gen
+      ~PythonScriptTask.query_udfs
+      ~PythonScriptTask.rand_seed_float
+      ~PythonScriptTask.rand_seed_uint32
+      ~PythonScriptTask.random_seed_bytes
+      ~PythonScriptTask.ray_dataset_path
+      ~PythonScriptTask.ray_marker_path
+      ~PythonScriptTask.retry_count
+      ~PythonScriptTask.runtime_id
+      ~PythonScriptTask.runtime_output_abspath
+      ~PythonScriptTask.runtime_state
+      ~PythonScriptTask.sched_epoch
+      ~PythonScriptTask.self_contained_output
+      ~PythonScriptTask.skip_when_any_input_empty
+      ~PythonScriptTask.staging_root
+      ~PythonScriptTask.start_time
+      ~PythonScriptTask.status
+      ~PythonScriptTask.temp_abspath
+      ~PythonScriptTask.temp_output
+      ~PythonScriptTask.udfs
+      ~PythonScriptTask.uniform_failure_prob
+   
+   

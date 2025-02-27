@@ -1,0 +1,46 @@
+﻿smallpond.logical.dataset.PandasDataSet
+=======================================
+
+.. currentmodule:: smallpond.logical.dataset
+
+.. autoclass:: PandasDataSet
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PandasDataSet.__init__
+      ~PandasDataSet.log
+      ~PandasDataSet.merge
+      ~PandasDataSet.partition_by_files
+      ~PandasDataSet.reset
+      ~PandasDataSet.sql_query_fragment
+      ~PandasDataSet.to_arrow_table
+      ~PandasDataSet.to_batch_reader
+      ~PandasDataSet.to_pandas
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PandasDataSet.paths
+      ~PandasDataSet.root_dir
+      ~PandasDataSet.recursive
+      ~PandasDataSet.columns
+      ~PandasDataSet.absolute_paths
+      ~PandasDataSet.empty
+      ~PandasDataSet.num_files
+      ~PandasDataSet.num_rows
+      ~PandasDataSet.resolved_paths
+      ~PandasDataSet.udfs
+      ~PandasDataSet.union_by_name
+   
+   

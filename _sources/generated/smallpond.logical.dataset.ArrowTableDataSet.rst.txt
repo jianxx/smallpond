@@ -1,0 +1,46 @@
+﻿smallpond.logical.dataset.ArrowTableDataSet
+===========================================
+
+.. currentmodule:: smallpond.logical.dataset
+
+.. autoclass:: ArrowTableDataSet
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ArrowTableDataSet.__init__
+      ~ArrowTableDataSet.log
+      ~ArrowTableDataSet.merge
+      ~ArrowTableDataSet.partition_by_files
+      ~ArrowTableDataSet.reset
+      ~ArrowTableDataSet.sql_query_fragment
+      ~ArrowTableDataSet.to_arrow_table
+      ~ArrowTableDataSet.to_batch_reader
+      ~ArrowTableDataSet.to_pandas
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ArrowTableDataSet.paths
+      ~ArrowTableDataSet.root_dir
+      ~ArrowTableDataSet.recursive
+      ~ArrowTableDataSet.columns
+      ~ArrowTableDataSet.absolute_paths
+      ~ArrowTableDataSet.empty
+      ~ArrowTableDataSet.num_files
+      ~ArrowTableDataSet.num_rows
+      ~ArrowTableDataSet.resolved_paths
+      ~ArrowTableDataSet.udfs
+      ~ArrowTableDataSet.union_by_name
+   
+   

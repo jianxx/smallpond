@@ -1,0 +1,51 @@
+﻿smallpond.logical.dataset.CsvDataSet
+====================================
+
+.. currentmodule:: smallpond.logical.dataset
+
+.. autoclass:: CsvDataSet
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CsvDataSet.__init__
+      ~CsvDataSet.log
+      ~CsvDataSet.merge
+      ~CsvDataSet.partition_by_files
+      ~CsvDataSet.reset
+      ~CsvDataSet.sql_query_fragment
+      ~CsvDataSet.to_arrow_table
+      ~CsvDataSet.to_batch_reader
+      ~CsvDataSet.to_pandas
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CsvDataSet.schema
+      ~CsvDataSet.delim
+      ~CsvDataSet.max_line_size
+      ~CsvDataSet.parallel
+      ~CsvDataSet.header
+      ~CsvDataSet.absolute_paths
+      ~CsvDataSet.columns
+      ~CsvDataSet.empty
+      ~CsvDataSet.num_files
+      ~CsvDataSet.num_rows
+      ~CsvDataSet.paths
+      ~CsvDataSet.recursive
+      ~CsvDataSet.resolved_paths
+      ~CsvDataSet.root_dir
+      ~CsvDataSet.udfs
+      ~CsvDataSet.union_by_name
+   
+   

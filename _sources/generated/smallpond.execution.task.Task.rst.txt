@@ -1,0 +1,103 @@
+﻿smallpond.execution.task.Task
+=============================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: Task
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Task.__init__
+      ~Task.add_elapsed_time
+      ~Task.adjust_row_group_size
+      ~Task.clean_complex_attrs
+      ~Task.clean_output
+      ~Task.cleanup
+      ~Task.compute_avg_row_size
+      ~Task.dump
+      ~Task.exec
+      ~Task.finalize
+      ~Task.get_partition_info
+      ~Task.initialize
+      ~Task.inject_fault
+      ~Task.merge_metrics
+      ~Task.oom
+      ~Task.parquet_kv_metadata_bytes
+      ~Task.parquet_kv_metadata_str
+      ~Task.random_float
+      ~Task.random_uint32
+      ~Task.run
+      ~Task.run_on_ray
+      ~Task.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Task.ctx
+      ~Task.id
+      ~Task.node_id
+      ~Task.sched_epoch
+      ~Task.output_name
+      ~Task.output_root
+      ~Task.dataset
+      ~Task.input_deps
+      ~Task.output_deps
+      ~Task.perf_metrics
+      ~Task.perf_profile
+      ~Task.runtime_state
+      ~Task.input_datasets
+      ~Task.allow_speculative_exec
+      ~Task.any_input_empty
+      ~Task.cpu_limit
+      ~Task.default_output_name
+      ~Task.elapsed_time
+      ~Task.exception
+      ~Task.exec_cq
+      ~Task.exec_id
+      ~Task.exec_on_scheduler
+      ~Task.fail_count
+      ~Task.final_output_abspath
+      ~Task.finish_time
+      ~Task.gpu_limit
+      ~Task.key
+      ~Task.local_gpu
+      ~Task.local_gpu_ranks
+      ~Task.local_rank
+      ~Task.location
+      ~Task.memory_limit
+      ~Task.numa_node
+      ~Task.numpy_random_gen
+      ~Task.output
+      ~Task.output_dirname
+      ~Task.output_filename
+      ~Task.partition_dims
+      ~Task.partition_infos
+      ~Task.partition_infos_as_dict
+      ~Task.python_random_gen
+      ~Task.random_seed_bytes
+      ~Task.ray_dataset_path
+      ~Task.ray_marker_path
+      ~Task.retry_count
+      ~Task.runtime_id
+      ~Task.runtime_output_abspath
+      ~Task.self_contained_output
+      ~Task.skip_when_any_input_empty
+      ~Task.staging_root
+      ~Task.start_time
+      ~Task.status
+      ~Task.temp_abspath
+      ~Task.temp_output
+      ~Task.uniform_failure_prob
+   
+   

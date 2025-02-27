@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.Session.from\_pandas
+========================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: Session.from_pandas

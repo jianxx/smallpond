@@ -1,0 +1,32 @@
+﻿smallpond.execution.task.PartitionInfo
+======================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: PartitionInfo
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PartitionInfo.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PartitionInfo.index
+      ~PartitionInfo.npartitions
+      ~PartitionInfo.dimension
+      ~PartitionInfo.default_dimension
+      ~PartitionInfo.toplevel_dimension
+   
+   

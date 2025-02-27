@@ -1,0 +1,36 @@
+﻿smallpond.logical.node.PythonScriptNode
+=======================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: PythonScriptNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PythonScriptNode.__init__
+      ~PythonScriptNode.add_perf_metrics
+      ~PythonScriptNode.create_task
+      ~PythonScriptNode.get_perf_stats
+      ~PythonScriptNode.process
+      ~PythonScriptNode.slim_copy
+      ~PythonScriptNode.spawn
+      ~PythonScriptNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PythonScriptNode.enable_resource_boost
+      ~PythonScriptNode.num_partitions
+   
+   

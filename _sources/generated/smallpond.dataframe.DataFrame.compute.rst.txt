@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.compute
+=====================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.compute

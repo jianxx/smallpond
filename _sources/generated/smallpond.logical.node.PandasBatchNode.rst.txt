@@ -1,0 +1,39 @@
+﻿smallpond.logical.node.PandasBatchNode
+======================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: PandasBatchNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PandasBatchNode.__init__
+      ~PandasBatchNode.add_perf_metrics
+      ~PandasBatchNode.create_task
+      ~PandasBatchNode.get_perf_stats
+      ~PandasBatchNode.process
+      ~PandasBatchNode.slim_copy
+      ~PandasBatchNode.spawn
+      ~PandasBatchNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PandasBatchNode.default_batch_size
+      ~PandasBatchNode.default_row_group_size
+      ~PandasBatchNode.default_secs_checkpoint_interval
+      ~PandasBatchNode.enable_resource_boost
+      ~PandasBatchNode.num_partitions
+   
+   

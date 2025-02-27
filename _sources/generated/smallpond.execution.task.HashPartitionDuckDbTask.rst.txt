@@ -1,0 +1,143 @@
+﻿smallpond.execution.task.HashPartitionDuckDbTask
+================================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: HashPartitionDuckDbTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~HashPartitionDuckDbTask.__init__
+      ~HashPartitionDuckDbTask.add_elapsed_time
+      ~HashPartitionDuckDbTask.adjust_row_group_size
+      ~HashPartitionDuckDbTask.clean_complex_attrs
+      ~HashPartitionDuckDbTask.clean_output
+      ~HashPartitionDuckDbTask.cleanup
+      ~HashPartitionDuckDbTask.compute_avg_row_size
+      ~HashPartitionDuckDbTask.create
+      ~HashPartitionDuckDbTask.create_input_views
+      ~HashPartitionDuckDbTask.dump
+      ~HashPartitionDuckDbTask.exec
+      ~HashPartitionDuckDbTask.exec_query
+      ~HashPartitionDuckDbTask.finalize
+      ~HashPartitionDuckDbTask.get_partition_info
+      ~HashPartitionDuckDbTask.initialize
+      ~HashPartitionDuckDbTask.inject_fault
+      ~HashPartitionDuckDbTask.load_input_batch
+      ~HashPartitionDuckDbTask.merge_metrics
+      ~HashPartitionDuckDbTask.oom
+      ~HashPartitionDuckDbTask.parquet_kv_metadata_bytes
+      ~HashPartitionDuckDbTask.parquet_kv_metadata_str
+      ~HashPartitionDuckDbTask.partition
+      ~HashPartitionDuckDbTask.prepare_connection
+      ~HashPartitionDuckDbTask.random_float
+      ~HashPartitionDuckDbTask.random_uint32
+      ~HashPartitionDuckDbTask.run
+      ~HashPartitionDuckDbTask.run_on_ray
+      ~HashPartitionDuckDbTask.set_memory_limit
+      ~HashPartitionDuckDbTask.write_flat_partitions
+      ~HashPartitionDuckDbTask.write_hive_partitions
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~HashPartitionDuckDbTask.hash_columns
+      ~HashPartitionDuckDbTask.data_partition_column
+      ~HashPartitionDuckDbTask.random_shuffle
+      ~HashPartitionDuckDbTask.shuffle_only
+      ~HashPartitionDuckDbTask.drop_partition_column
+      ~HashPartitionDuckDbTask.use_parquet_writer
+      ~HashPartitionDuckDbTask.hive_partitioning
+      ~HashPartitionDuckDbTask.parquet_row_group_size
+      ~HashPartitionDuckDbTask.parquet_row_group_bytes
+      ~HashPartitionDuckDbTask.parquet_dictionary_encoding
+      ~HashPartitionDuckDbTask.parquet_compression
+      ~HashPartitionDuckDbTask.parquet_compression_level
+      ~HashPartitionDuckDbTask.partitioned_datasets
+      ~HashPartitionDuckDbTask.allow_speculative_exec
+      ~HashPartitionDuckDbTask.any_input_empty
+      ~HashPartitionDuckDbTask.compression_level_str
+      ~HashPartitionDuckDbTask.compression_options
+      ~HashPartitionDuckDbTask.compression_type_str
+      ~HashPartitionDuckDbTask.cpu_limit
+      ~HashPartitionDuckDbTask.cpu_overcommit_ratio
+      ~HashPartitionDuckDbTask.ctx
+      ~HashPartitionDuckDbTask.dataset
+      ~HashPartitionDuckDbTask.default_output_name
+      ~HashPartitionDuckDbTask.dimension
+      ~HashPartitionDuckDbTask.elapsed_time
+      ~HashPartitionDuckDbTask.enable_temp_directory
+      ~HashPartitionDuckDbTask.exception
+      ~HashPartitionDuckDbTask.exec_cq
+      ~HashPartitionDuckDbTask.exec_id
+      ~HashPartitionDuckDbTask.exec_on_scheduler
+      ~HashPartitionDuckDbTask.fail_count
+      ~HashPartitionDuckDbTask.final_output_abspath
+      ~HashPartitionDuckDbTask.finish_time
+      ~HashPartitionDuckDbTask.gpu_limit
+      ~HashPartitionDuckDbTask.id
+      ~HashPartitionDuckDbTask.input_datasets
+      ~HashPartitionDuckDbTask.input_deps
+      ~HashPartitionDuckDbTask.input_udfs
+      ~HashPartitionDuckDbTask.input_view_index
+      ~HashPartitionDuckDbTask.io_workers
+      ~HashPartitionDuckDbTask.key
+      ~HashPartitionDuckDbTask.local_gpu
+      ~HashPartitionDuckDbTask.local_gpu_ranks
+      ~HashPartitionDuckDbTask.local_rank
+      ~HashPartitionDuckDbTask.location
+      ~HashPartitionDuckDbTask.max_batch_size
+      ~HashPartitionDuckDbTask.memory_limit
+      ~HashPartitionDuckDbTask.memory_overcommit_ratio
+      ~HashPartitionDuckDbTask.node_id
+      ~HashPartitionDuckDbTask.npartitions
+      ~HashPartitionDuckDbTask.num_workers
+      ~HashPartitionDuckDbTask.numa_node
+      ~HashPartitionDuckDbTask.numpy_random_gen
+      ~HashPartitionDuckDbTask.output
+      ~HashPartitionDuckDbTask.output_deps
+      ~HashPartitionDuckDbTask.output_dirname
+      ~HashPartitionDuckDbTask.output_filename
+      ~HashPartitionDuckDbTask.output_name
+      ~HashPartitionDuckDbTask.output_root
+      ~HashPartitionDuckDbTask.partition_dims
+      ~HashPartitionDuckDbTask.partition_infos
+      ~HashPartitionDuckDbTask.partition_infos_as_dict
+      ~HashPartitionDuckDbTask.partition_query
+      ~HashPartitionDuckDbTask.perf_metrics
+      ~HashPartitionDuckDbTask.perf_profile
+      ~HashPartitionDuckDbTask.python_random_gen
+      ~HashPartitionDuckDbTask.query_udfs
+      ~HashPartitionDuckDbTask.rand_seed_float
+      ~HashPartitionDuckDbTask.rand_seed_uint32
+      ~HashPartitionDuckDbTask.random_seed_bytes
+      ~HashPartitionDuckDbTask.ray_dataset_path
+      ~HashPartitionDuckDbTask.ray_marker_path
+      ~HashPartitionDuckDbTask.retry_count
+      ~HashPartitionDuckDbTask.runtime_id
+      ~HashPartitionDuckDbTask.runtime_output_abspath
+      ~HashPartitionDuckDbTask.runtime_state
+      ~HashPartitionDuckDbTask.sched_epoch
+      ~HashPartitionDuckDbTask.self_contained_output
+      ~HashPartitionDuckDbTask.skip_when_any_input_empty
+      ~HashPartitionDuckDbTask.staging_root
+      ~HashPartitionDuckDbTask.start_time
+      ~HashPartitionDuckDbTask.status
+      ~HashPartitionDuckDbTask.temp_abspath
+      ~HashPartitionDuckDbTask.temp_output
+      ~HashPartitionDuckDbTask.udfs
+      ~HashPartitionDuckDbTask.uniform_failure_prob
+      ~HashPartitionDuckDbTask.write_buffer_size
+   
+   

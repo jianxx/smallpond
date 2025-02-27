@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.take
+==================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.take

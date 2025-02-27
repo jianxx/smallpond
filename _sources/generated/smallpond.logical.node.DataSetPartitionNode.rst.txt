@@ -1,0 +1,6 @@
+﻿smallpond.logical.node.DataSetPartitionNode
+===========================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autofunction:: DataSetPartitionNode

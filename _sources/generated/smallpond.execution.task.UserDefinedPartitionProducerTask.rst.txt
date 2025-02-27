@@ -1,0 +1,107 @@
+﻿smallpond.execution.task.UserDefinedPartitionProducerTask
+=========================================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: UserDefinedPartitionProducerTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~UserDefinedPartitionProducerTask.__init__
+      ~UserDefinedPartitionProducerTask.add_elapsed_time
+      ~UserDefinedPartitionProducerTask.adjust_row_group_size
+      ~UserDefinedPartitionProducerTask.clean_complex_attrs
+      ~UserDefinedPartitionProducerTask.clean_output
+      ~UserDefinedPartitionProducerTask.cleanup
+      ~UserDefinedPartitionProducerTask.compute_avg_row_size
+      ~UserDefinedPartitionProducerTask.dump
+      ~UserDefinedPartitionProducerTask.exec
+      ~UserDefinedPartitionProducerTask.finalize
+      ~UserDefinedPartitionProducerTask.get_partition_info
+      ~UserDefinedPartitionProducerTask.initialize
+      ~UserDefinedPartitionProducerTask.inject_fault
+      ~UserDefinedPartitionProducerTask.merge_metrics
+      ~UserDefinedPartitionProducerTask.oom
+      ~UserDefinedPartitionProducerTask.parquet_kv_metadata_bytes
+      ~UserDefinedPartitionProducerTask.parquet_kv_metadata_str
+      ~UserDefinedPartitionProducerTask.random_float
+      ~UserDefinedPartitionProducerTask.random_uint32
+      ~UserDefinedPartitionProducerTask.run
+      ~UserDefinedPartitionProducerTask.run_on_ray
+      ~UserDefinedPartitionProducerTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~UserDefinedPartitionProducerTask.partition_func
+      ~UserDefinedPartitionProducerTask.allow_speculative_exec
+      ~UserDefinedPartitionProducerTask.any_input_empty
+      ~UserDefinedPartitionProducerTask.cpu_limit
+      ~UserDefinedPartitionProducerTask.ctx
+      ~UserDefinedPartitionProducerTask.dataset
+      ~UserDefinedPartitionProducerTask.default_output_name
+      ~UserDefinedPartitionProducerTask.dimension
+      ~UserDefinedPartitionProducerTask.elapsed_time
+      ~UserDefinedPartitionProducerTask.exception
+      ~UserDefinedPartitionProducerTask.exec_cq
+      ~UserDefinedPartitionProducerTask.exec_id
+      ~UserDefinedPartitionProducerTask.exec_on_scheduler
+      ~UserDefinedPartitionProducerTask.fail_count
+      ~UserDefinedPartitionProducerTask.final_output_abspath
+      ~UserDefinedPartitionProducerTask.finish_time
+      ~UserDefinedPartitionProducerTask.gpu_limit
+      ~UserDefinedPartitionProducerTask.id
+      ~UserDefinedPartitionProducerTask.input_datasets
+      ~UserDefinedPartitionProducerTask.input_deps
+      ~UserDefinedPartitionProducerTask.key
+      ~UserDefinedPartitionProducerTask.local_gpu
+      ~UserDefinedPartitionProducerTask.local_gpu_ranks
+      ~UserDefinedPartitionProducerTask.local_rank
+      ~UserDefinedPartitionProducerTask.location
+      ~UserDefinedPartitionProducerTask.memory_limit
+      ~UserDefinedPartitionProducerTask.node_id
+      ~UserDefinedPartitionProducerTask.npartitions
+      ~UserDefinedPartitionProducerTask.numa_node
+      ~UserDefinedPartitionProducerTask.numpy_random_gen
+      ~UserDefinedPartitionProducerTask.output
+      ~UserDefinedPartitionProducerTask.output_deps
+      ~UserDefinedPartitionProducerTask.output_dirname
+      ~UserDefinedPartitionProducerTask.output_filename
+      ~UserDefinedPartitionProducerTask.output_name
+      ~UserDefinedPartitionProducerTask.output_root
+      ~UserDefinedPartitionProducerTask.partition_dims
+      ~UserDefinedPartitionProducerTask.partition_infos
+      ~UserDefinedPartitionProducerTask.partition_infos_as_dict
+      ~UserDefinedPartitionProducerTask.partitioned_datasets
+      ~UserDefinedPartitionProducerTask.perf_metrics
+      ~UserDefinedPartitionProducerTask.perf_profile
+      ~UserDefinedPartitionProducerTask.python_random_gen
+      ~UserDefinedPartitionProducerTask.random_seed_bytes
+      ~UserDefinedPartitionProducerTask.ray_dataset_path
+      ~UserDefinedPartitionProducerTask.ray_marker_path
+      ~UserDefinedPartitionProducerTask.retry_count
+      ~UserDefinedPartitionProducerTask.runtime_id
+      ~UserDefinedPartitionProducerTask.runtime_output_abspath
+      ~UserDefinedPartitionProducerTask.runtime_state
+      ~UserDefinedPartitionProducerTask.sched_epoch
+      ~UserDefinedPartitionProducerTask.self_contained_output
+      ~UserDefinedPartitionProducerTask.skip_when_any_input_empty
+      ~UserDefinedPartitionProducerTask.staging_root
+      ~UserDefinedPartitionProducerTask.start_time
+      ~UserDefinedPartitionProducerTask.status
+      ~UserDefinedPartitionProducerTask.temp_abspath
+      ~UserDefinedPartitionProducerTask.temp_output
+      ~UserDefinedPartitionProducerTask.uniform_failure_prob
+   
+   

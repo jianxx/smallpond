@@ -1,0 +1,40 @@
+﻿smallpond.logical.node.RepeatPartitionNode
+==========================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: RepeatPartitionNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RepeatPartitionNode.__init__
+      ~RepeatPartitionNode.add_perf_metrics
+      ~RepeatPartitionNode.create_consumer_task
+      ~RepeatPartitionNode.create_merge_task
+      ~RepeatPartitionNode.create_producer_task
+      ~RepeatPartitionNode.create_split_task
+      ~RepeatPartitionNode.create_task
+      ~RepeatPartitionNode.get_perf_stats
+      ~RepeatPartitionNode.slim_copy
+      ~RepeatPartitionNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RepeatPartitionNode.enable_resource_boost
+      ~RepeatPartitionNode.max_card_of_producers_x_consumers
+      ~RepeatPartitionNode.max_num_producer_tasks
+      ~RepeatPartitionNode.num_partitions
+   
+   

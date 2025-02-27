@@ -1,0 +1,127 @@
+﻿smallpond.execution.task.PandasComputeTask
+==========================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: PandasComputeTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PandasComputeTask.__init__
+      ~PandasComputeTask.add_elapsed_time
+      ~PandasComputeTask.adjust_row_group_size
+      ~PandasComputeTask.clean_complex_attrs
+      ~PandasComputeTask.clean_output
+      ~PandasComputeTask.cleanup
+      ~PandasComputeTask.compute_avg_row_size
+      ~PandasComputeTask.create_input_views
+      ~PandasComputeTask.dump
+      ~PandasComputeTask.dump_output
+      ~PandasComputeTask.exec
+      ~PandasComputeTask.exec_query
+      ~PandasComputeTask.finalize
+      ~PandasComputeTask.get_partition_info
+      ~PandasComputeTask.initialize
+      ~PandasComputeTask.inject_fault
+      ~PandasComputeTask.merge_metrics
+      ~PandasComputeTask.oom
+      ~PandasComputeTask.parquet_kv_metadata_bytes
+      ~PandasComputeTask.parquet_kv_metadata_str
+      ~PandasComputeTask.prepare_connection
+      ~PandasComputeTask.process
+      ~PandasComputeTask.random_float
+      ~PandasComputeTask.random_uint32
+      ~PandasComputeTask.run
+      ~PandasComputeTask.run_on_ray
+      ~PandasComputeTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PandasComputeTask.process_func
+      ~PandasComputeTask.parquet_row_group_size
+      ~PandasComputeTask.parquet_row_group_bytes
+      ~PandasComputeTask.parquet_dictionary_encoding
+      ~PandasComputeTask.use_duckdb_reader
+      ~PandasComputeTask.allow_speculative_exec
+      ~PandasComputeTask.any_input_empty
+      ~PandasComputeTask.compression_level_str
+      ~PandasComputeTask.compression_options
+      ~PandasComputeTask.compression_type_str
+      ~PandasComputeTask.cpu_limit
+      ~PandasComputeTask.cpu_overcommit_ratio
+      ~PandasComputeTask.ctx
+      ~PandasComputeTask.dataset
+      ~PandasComputeTask.default_output_name
+      ~PandasComputeTask.elapsed_time
+      ~PandasComputeTask.enable_temp_directory
+      ~PandasComputeTask.exception
+      ~PandasComputeTask.exec_cq
+      ~PandasComputeTask.exec_id
+      ~PandasComputeTask.exec_on_scheduler
+      ~PandasComputeTask.fail_count
+      ~PandasComputeTask.final_output_abspath
+      ~PandasComputeTask.finish_time
+      ~PandasComputeTask.gpu_limit
+      ~PandasComputeTask.id
+      ~PandasComputeTask.input_datasets
+      ~PandasComputeTask.input_deps
+      ~PandasComputeTask.input_udfs
+      ~PandasComputeTask.input_view_index
+      ~PandasComputeTask.key
+      ~PandasComputeTask.local_gpu
+      ~PandasComputeTask.local_gpu_ranks
+      ~PandasComputeTask.local_rank
+      ~PandasComputeTask.location
+      ~PandasComputeTask.memory_limit
+      ~PandasComputeTask.memory_overcommit_ratio
+      ~PandasComputeTask.node_id
+      ~PandasComputeTask.numa_node
+      ~PandasComputeTask.numpy_random_gen
+      ~PandasComputeTask.output
+      ~PandasComputeTask.output_deps
+      ~PandasComputeTask.output_dirname
+      ~PandasComputeTask.output_filename
+      ~PandasComputeTask.output_name
+      ~PandasComputeTask.output_root
+      ~PandasComputeTask.parquet_compression
+      ~PandasComputeTask.parquet_compression_level
+      ~PandasComputeTask.partition_dims
+      ~PandasComputeTask.partition_infos
+      ~PandasComputeTask.partition_infos_as_dict
+      ~PandasComputeTask.perf_metrics
+      ~PandasComputeTask.perf_profile
+      ~PandasComputeTask.python_random_gen
+      ~PandasComputeTask.query_udfs
+      ~PandasComputeTask.rand_seed_float
+      ~PandasComputeTask.rand_seed_uint32
+      ~PandasComputeTask.random_seed_bytes
+      ~PandasComputeTask.ray_dataset_path
+      ~PandasComputeTask.ray_marker_path
+      ~PandasComputeTask.retry_count
+      ~PandasComputeTask.runtime_id
+      ~PandasComputeTask.runtime_output_abspath
+      ~PandasComputeTask.runtime_state
+      ~PandasComputeTask.sched_epoch
+      ~PandasComputeTask.self_contained_output
+      ~PandasComputeTask.skip_when_any_input_empty
+      ~PandasComputeTask.staging_root
+      ~PandasComputeTask.start_time
+      ~PandasComputeTask.status
+      ~PandasComputeTask.temp_abspath
+      ~PandasComputeTask.temp_output
+      ~PandasComputeTask.udfs
+      ~PandasComputeTask.uniform_failure_prob
+   
+   

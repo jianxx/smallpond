@@ -1,0 +1,37 @@
+﻿smallpond.logical.node.PandasComputeNode
+========================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: PandasComputeNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PandasComputeNode.__init__
+      ~PandasComputeNode.add_perf_metrics
+      ~PandasComputeNode.create_task
+      ~PandasComputeNode.get_perf_stats
+      ~PandasComputeNode.process
+      ~PandasComputeNode.slim_copy
+      ~PandasComputeNode.spawn
+      ~PandasComputeNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PandasComputeNode.default_row_group_size
+      ~PandasComputeNode.enable_resource_boost
+      ~PandasComputeNode.num_partitions
+   
+   

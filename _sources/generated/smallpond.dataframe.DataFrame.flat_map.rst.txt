@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.flat\_map
+=======================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.flat_map

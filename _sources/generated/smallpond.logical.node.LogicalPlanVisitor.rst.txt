@@ -1,0 +1,36 @@
+﻿smallpond.logical.node.LogicalPlanVisitor
+=========================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: LogicalPlanVisitor
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LogicalPlanVisitor.__init__
+      ~LogicalPlanVisitor.generic_visit
+      ~LogicalPlanVisitor.visit
+      ~LogicalPlanVisitor.visit_arrow_compute_node
+      ~LogicalPlanVisitor.visit_arrow_stream_node
+      ~LogicalPlanVisitor.visit_consolidate_node
+      ~LogicalPlanVisitor.visit_data_sink_node
+      ~LogicalPlanVisitor.visit_data_source_node
+      ~LogicalPlanVisitor.visit_limit_node
+      ~LogicalPlanVisitor.visit_partition_node
+      ~LogicalPlanVisitor.visit_projection_node
+      ~LogicalPlanVisitor.visit_python_script_node
+      ~LogicalPlanVisitor.visit_query_engine_node
+      ~LogicalPlanVisitor.visit_root_node
+      ~LogicalPlanVisitor.visit_union_node
+   
+   
+
+   
+   
+   

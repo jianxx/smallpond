@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.is\_computed
+==========================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.is_computed

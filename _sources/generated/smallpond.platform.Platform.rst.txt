@@ -1,0 +1,32 @@
+﻿smallpond.platform.Platform
+===========================
+
+.. currentmodule:: smallpond.platform
+
+.. autoclass:: Platform
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Platform.__init__
+      ~Platform.default_data_root
+      ~Platform.default_job_id
+      ~Platform.default_job_time
+      ~Platform.default_memory_allocator
+      ~Platform.default_share_log_analytics
+      ~Platform.grafana_homepath
+      ~Platform.is_available
+      ~Platform.shared_log_root
+      ~Platform.start_job
+      ~Platform.stop_job
+   
+   
+
+   
+   
+   

@@ -1,0 +1,125 @@
+﻿smallpond.execution.task.HashPartitionArrowTask
+===============================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: HashPartitionArrowTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~HashPartitionArrowTask.__init__
+      ~HashPartitionArrowTask.add_elapsed_time
+      ~HashPartitionArrowTask.adjust_row_group_size
+      ~HashPartitionArrowTask.clean_complex_attrs
+      ~HashPartitionArrowTask.clean_output
+      ~HashPartitionArrowTask.cleanup
+      ~HashPartitionArrowTask.compute_avg_row_size
+      ~HashPartitionArrowTask.create
+      ~HashPartitionArrowTask.dump
+      ~HashPartitionArrowTask.exec
+      ~HashPartitionArrowTask.finalize
+      ~HashPartitionArrowTask.get_partition_info
+      ~HashPartitionArrowTask.initialize
+      ~HashPartitionArrowTask.inject_fault
+      ~HashPartitionArrowTask.merge_metrics
+      ~HashPartitionArrowTask.oom
+      ~HashPartitionArrowTask.parquet_kv_metadata_bytes
+      ~HashPartitionArrowTask.parquet_kv_metadata_str
+      ~HashPartitionArrowTask.partition
+      ~HashPartitionArrowTask.random_float
+      ~HashPartitionArrowTask.random_uint32
+      ~HashPartitionArrowTask.run
+      ~HashPartitionArrowTask.run_on_ray
+      ~HashPartitionArrowTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~HashPartitionArrowTask.hash_columns
+      ~HashPartitionArrowTask.data_partition_column
+      ~HashPartitionArrowTask.random_shuffle
+      ~HashPartitionArrowTask.shuffle_only
+      ~HashPartitionArrowTask.drop_partition_column
+      ~HashPartitionArrowTask.use_parquet_writer
+      ~HashPartitionArrowTask.hive_partitioning
+      ~HashPartitionArrowTask.parquet_row_group_size
+      ~HashPartitionArrowTask.parquet_row_group_bytes
+      ~HashPartitionArrowTask.parquet_dictionary_encoding
+      ~HashPartitionArrowTask.parquet_compression
+      ~HashPartitionArrowTask.parquet_compression_level
+      ~HashPartitionArrowTask.partitioned_datasets
+      ~HashPartitionArrowTask.allow_speculative_exec
+      ~HashPartitionArrowTask.any_input_empty
+      ~HashPartitionArrowTask.cpu_limit
+      ~HashPartitionArrowTask.ctx
+      ~HashPartitionArrowTask.dataset
+      ~HashPartitionArrowTask.default_output_name
+      ~HashPartitionArrowTask.dimension
+      ~HashPartitionArrowTask.elapsed_time
+      ~HashPartitionArrowTask.exception
+      ~HashPartitionArrowTask.exec_cq
+      ~HashPartitionArrowTask.exec_id
+      ~HashPartitionArrowTask.exec_on_scheduler
+      ~HashPartitionArrowTask.fail_count
+      ~HashPartitionArrowTask.final_output_abspath
+      ~HashPartitionArrowTask.finish_time
+      ~HashPartitionArrowTask.fixed_rand_seeds
+      ~HashPartitionArrowTask.gpu_limit
+      ~HashPartitionArrowTask.id
+      ~HashPartitionArrowTask.input_datasets
+      ~HashPartitionArrowTask.input_deps
+      ~HashPartitionArrowTask.io_workers
+      ~HashPartitionArrowTask.key
+      ~HashPartitionArrowTask.local_gpu
+      ~HashPartitionArrowTask.local_gpu_ranks
+      ~HashPartitionArrowTask.local_rank
+      ~HashPartitionArrowTask.location
+      ~HashPartitionArrowTask.max_batch_size
+      ~HashPartitionArrowTask.memory_limit
+      ~HashPartitionArrowTask.node_id
+      ~HashPartitionArrowTask.npartitions
+      ~HashPartitionArrowTask.num_workers
+      ~HashPartitionArrowTask.numa_node
+      ~HashPartitionArrowTask.numpy_random_gen
+      ~HashPartitionArrowTask.output
+      ~HashPartitionArrowTask.output_deps
+      ~HashPartitionArrowTask.output_dirname
+      ~HashPartitionArrowTask.output_filename
+      ~HashPartitionArrowTask.output_name
+      ~HashPartitionArrowTask.output_root
+      ~HashPartitionArrowTask.partition_dims
+      ~HashPartitionArrowTask.partition_infos
+      ~HashPartitionArrowTask.partition_infos_as_dict
+      ~HashPartitionArrowTask.perf_metrics
+      ~HashPartitionArrowTask.perf_profile
+      ~HashPartitionArrowTask.python_random_gen
+      ~HashPartitionArrowTask.random_seed_bytes
+      ~HashPartitionArrowTask.ray_dataset_path
+      ~HashPartitionArrowTask.ray_marker_path
+      ~HashPartitionArrowTask.retry_count
+      ~HashPartitionArrowTask.runtime_id
+      ~HashPartitionArrowTask.runtime_output_abspath
+      ~HashPartitionArrowTask.runtime_state
+      ~HashPartitionArrowTask.sched_epoch
+      ~HashPartitionArrowTask.self_contained_output
+      ~HashPartitionArrowTask.skip_when_any_input_empty
+      ~HashPartitionArrowTask.staging_root
+      ~HashPartitionArrowTask.start_time
+      ~HashPartitionArrowTask.status
+      ~HashPartitionArrowTask.temp_abspath
+      ~HashPartitionArrowTask.temp_output
+      ~HashPartitionArrowTask.uniform_failure_prob
+      ~HashPartitionArrowTask.write_buffer_size
+   
+   

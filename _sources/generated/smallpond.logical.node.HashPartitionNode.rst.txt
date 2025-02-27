@@ -1,0 +1,45 @@
+﻿smallpond.logical.node.HashPartitionNode
+========================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: HashPartitionNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~HashPartitionNode.__init__
+      ~HashPartitionNode.add_perf_metrics
+      ~HashPartitionNode.create_consumer_task
+      ~HashPartitionNode.create_merge_task
+      ~HashPartitionNode.create_producer_task
+      ~HashPartitionNode.create_split_task
+      ~HashPartitionNode.create_task
+      ~HashPartitionNode.get_perf_stats
+      ~HashPartitionNode.slim_copy
+      ~HashPartitionNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~HashPartitionNode.default_cpu_limit
+      ~HashPartitionNode.default_data_partition_column
+      ~HashPartitionNode.default_engine_type
+      ~HashPartitionNode.default_memory_limit
+      ~HashPartitionNode.default_row_group_size
+      ~HashPartitionNode.enable_resource_boost
+      ~HashPartitionNode.max_card_of_producers_x_consumers
+      ~HashPartitionNode.max_num_producer_tasks
+      ~HashPartitionNode.num_partitions
+   
+   

@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.Session.from\_arrow
+=======================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: Session.from_arrow

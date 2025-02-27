@@ -1,0 +1,34 @@
+﻿smallpond.logical.node.RootNode
+===============================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: RootNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RootNode.__init__
+      ~RootNode.add_perf_metrics
+      ~RootNode.create_task
+      ~RootNode.get_perf_stats
+      ~RootNode.slim_copy
+      ~RootNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RootNode.enable_resource_boost
+      ~RootNode.num_partitions
+   
+   

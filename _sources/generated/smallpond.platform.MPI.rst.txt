@@ -1,0 +1,32 @@
+﻿smallpond.platform.MPI
+======================
+
+.. currentmodule:: smallpond.platform
+
+.. autoclass:: MPI
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MPI.__init__
+      ~MPI.default_data_root
+      ~MPI.default_job_id
+      ~MPI.default_job_time
+      ~MPI.default_memory_allocator
+      ~MPI.default_share_log_analytics
+      ~MPI.grafana_homepath
+      ~MPI.is_available
+      ~MPI.shared_log_root
+      ~MPI.start_job
+      ~MPI.stop_job
+   
+   
+
+   
+   
+   

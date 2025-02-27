@@ -1,0 +1,34 @@
+﻿smallpond.logical.node.ProjectionNode
+=====================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: ProjectionNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ProjectionNode.__init__
+      ~ProjectionNode.add_perf_metrics
+      ~ProjectionNode.create_task
+      ~ProjectionNode.get_perf_stats
+      ~ProjectionNode.slim_copy
+      ~ProjectionNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ProjectionNode.enable_resource_boost
+      ~ProjectionNode.num_partitions
+   
+   

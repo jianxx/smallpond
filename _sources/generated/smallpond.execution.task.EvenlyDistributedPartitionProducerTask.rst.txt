@@ -1,0 +1,108 @@
+﻿smallpond.execution.task.EvenlyDistributedPartitionProducerTask
+===============================================================
+
+.. currentmodule:: smallpond.execution.task
+
+.. autoclass:: EvenlyDistributedPartitionProducerTask
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~EvenlyDistributedPartitionProducerTask.__init__
+      ~EvenlyDistributedPartitionProducerTask.add_elapsed_time
+      ~EvenlyDistributedPartitionProducerTask.adjust_row_group_size
+      ~EvenlyDistributedPartitionProducerTask.clean_complex_attrs
+      ~EvenlyDistributedPartitionProducerTask.clean_output
+      ~EvenlyDistributedPartitionProducerTask.cleanup
+      ~EvenlyDistributedPartitionProducerTask.compute_avg_row_size
+      ~EvenlyDistributedPartitionProducerTask.dump
+      ~EvenlyDistributedPartitionProducerTask.exec
+      ~EvenlyDistributedPartitionProducerTask.finalize
+      ~EvenlyDistributedPartitionProducerTask.get_partition_info
+      ~EvenlyDistributedPartitionProducerTask.initialize
+      ~EvenlyDistributedPartitionProducerTask.inject_fault
+      ~EvenlyDistributedPartitionProducerTask.merge_metrics
+      ~EvenlyDistributedPartitionProducerTask.oom
+      ~EvenlyDistributedPartitionProducerTask.parquet_kv_metadata_bytes
+      ~EvenlyDistributedPartitionProducerTask.parquet_kv_metadata_str
+      ~EvenlyDistributedPartitionProducerTask.random_float
+      ~EvenlyDistributedPartitionProducerTask.random_uint32
+      ~EvenlyDistributedPartitionProducerTask.run
+      ~EvenlyDistributedPartitionProducerTask.run_on_ray
+      ~EvenlyDistributedPartitionProducerTask.set_memory_limit
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~EvenlyDistributedPartitionProducerTask.partition_by_rows
+      ~EvenlyDistributedPartitionProducerTask.random_shuffle
+      ~EvenlyDistributedPartitionProducerTask.allow_speculative_exec
+      ~EvenlyDistributedPartitionProducerTask.any_input_empty
+      ~EvenlyDistributedPartitionProducerTask.cpu_limit
+      ~EvenlyDistributedPartitionProducerTask.ctx
+      ~EvenlyDistributedPartitionProducerTask.dataset
+      ~EvenlyDistributedPartitionProducerTask.default_output_name
+      ~EvenlyDistributedPartitionProducerTask.dimension
+      ~EvenlyDistributedPartitionProducerTask.elapsed_time
+      ~EvenlyDistributedPartitionProducerTask.exception
+      ~EvenlyDistributedPartitionProducerTask.exec_cq
+      ~EvenlyDistributedPartitionProducerTask.exec_id
+      ~EvenlyDistributedPartitionProducerTask.exec_on_scheduler
+      ~EvenlyDistributedPartitionProducerTask.fail_count
+      ~EvenlyDistributedPartitionProducerTask.final_output_abspath
+      ~EvenlyDistributedPartitionProducerTask.finish_time
+      ~EvenlyDistributedPartitionProducerTask.gpu_limit
+      ~EvenlyDistributedPartitionProducerTask.id
+      ~EvenlyDistributedPartitionProducerTask.input_datasets
+      ~EvenlyDistributedPartitionProducerTask.input_deps
+      ~EvenlyDistributedPartitionProducerTask.key
+      ~EvenlyDistributedPartitionProducerTask.local_gpu
+      ~EvenlyDistributedPartitionProducerTask.local_gpu_ranks
+      ~EvenlyDistributedPartitionProducerTask.local_rank
+      ~EvenlyDistributedPartitionProducerTask.location
+      ~EvenlyDistributedPartitionProducerTask.memory_limit
+      ~EvenlyDistributedPartitionProducerTask.node_id
+      ~EvenlyDistributedPartitionProducerTask.npartitions
+      ~EvenlyDistributedPartitionProducerTask.numa_node
+      ~EvenlyDistributedPartitionProducerTask.numpy_random_gen
+      ~EvenlyDistributedPartitionProducerTask.output
+      ~EvenlyDistributedPartitionProducerTask.output_deps
+      ~EvenlyDistributedPartitionProducerTask.output_dirname
+      ~EvenlyDistributedPartitionProducerTask.output_filename
+      ~EvenlyDistributedPartitionProducerTask.output_name
+      ~EvenlyDistributedPartitionProducerTask.output_root
+      ~EvenlyDistributedPartitionProducerTask.partition_dims
+      ~EvenlyDistributedPartitionProducerTask.partition_infos
+      ~EvenlyDistributedPartitionProducerTask.partition_infos_as_dict
+      ~EvenlyDistributedPartitionProducerTask.partitioned_datasets
+      ~EvenlyDistributedPartitionProducerTask.perf_metrics
+      ~EvenlyDistributedPartitionProducerTask.perf_profile
+      ~EvenlyDistributedPartitionProducerTask.python_random_gen
+      ~EvenlyDistributedPartitionProducerTask.random_seed_bytes
+      ~EvenlyDistributedPartitionProducerTask.ray_dataset_path
+      ~EvenlyDistributedPartitionProducerTask.ray_marker_path
+      ~EvenlyDistributedPartitionProducerTask.retry_count
+      ~EvenlyDistributedPartitionProducerTask.runtime_id
+      ~EvenlyDistributedPartitionProducerTask.runtime_output_abspath
+      ~EvenlyDistributedPartitionProducerTask.runtime_state
+      ~EvenlyDistributedPartitionProducerTask.sched_epoch
+      ~EvenlyDistributedPartitionProducerTask.self_contained_output
+      ~EvenlyDistributedPartitionProducerTask.skip_when_any_input_empty
+      ~EvenlyDistributedPartitionProducerTask.staging_root
+      ~EvenlyDistributedPartitionProducerTask.start_time
+      ~EvenlyDistributedPartitionProducerTask.status
+      ~EvenlyDistributedPartitionProducerTask.temp_abspath
+      ~EvenlyDistributedPartitionProducerTask.temp_output
+      ~EvenlyDistributedPartitionProducerTask.uniform_failure_prob
+   
+   

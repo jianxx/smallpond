@@ -1,0 +1,39 @@
+﻿smallpond.logical.node.ArrowStreamNode
+======================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: ArrowStreamNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ArrowStreamNode.__init__
+      ~ArrowStreamNode.add_perf_metrics
+      ~ArrowStreamNode.create_task
+      ~ArrowStreamNode.get_perf_stats
+      ~ArrowStreamNode.process
+      ~ArrowStreamNode.slim_copy
+      ~ArrowStreamNode.spawn
+      ~ArrowStreamNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ArrowStreamNode.default_batch_size
+      ~ArrowStreamNode.default_row_group_size
+      ~ArrowStreamNode.default_secs_checkpoint_interval
+      ~ArrowStreamNode.enable_resource_boost
+      ~ArrowStreamNode.num_partitions
+   
+   

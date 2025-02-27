@@ -1,0 +1,40 @@
+﻿smallpond.logical.node.RangePartitionNode
+=========================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: RangePartitionNode
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RangePartitionNode.__init__
+      ~RangePartitionNode.add_perf_metrics
+      ~RangePartitionNode.create_consumer_task
+      ~RangePartitionNode.create_merge_task
+      ~RangePartitionNode.create_producer_task
+      ~RangePartitionNode.create_split_task
+      ~RangePartitionNode.create_task
+      ~RangePartitionNode.get_perf_stats
+      ~RangePartitionNode.slim_copy
+      ~RangePartitionNode.task_factory
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RangePartitionNode.enable_resource_boost
+      ~RangePartitionNode.max_card_of_producers_x_consumers
+      ~RangePartitionNode.max_num_producer_tasks
+      ~RangePartitionNode.num_partitions
+   
+   

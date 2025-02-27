@@ -1,0 +1,30 @@
+﻿smallpond.logical.node.LogicalPlan
+==================================
+
+.. currentmodule:: smallpond.logical.node
+
+.. autoclass:: LogicalPlan
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LogicalPlan.__init__
+      ~LogicalPlan.explain_str
+      ~LogicalPlan.graph
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LogicalPlan.nodes
+   
+   

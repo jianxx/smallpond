@@ -1,0 +1,6 @@
+﻿smallpond.dataframe.DataFrame.filter
+====================================
+
+.. currentmodule:: smallpond.dataframe
+
+.. automethod:: DataFrame.filter
