@@ -598,8 +598,13 @@ class DataFrame:
         """
 
         if streaming:
-            def process_func(_runtime_ctx, readers: List[arrow.RecordBatchReader]) -> Iterator[arrow.Table]:
-                tables = map(lambda batch: arrow.Table.from_batches([batch]), readers[0])
+
+            def process_func(
+                _runtime_ctx, readers: List[arrow.RecordBatchReader]
+            ) -> Iterator[arrow.Table]:
+                tables = map(
+                    lambda batch: arrow.Table.from_batches([batch]), readers[0]
+                )
                 return func(tables)
 
             plan = ArrowStreamNode(
@@ -610,6 +615,7 @@ class DataFrame:
                 **kwargs,
             )
         else:
+
             def process_func(_runtime_ctx, tables: List[arrow.Table]) -> arrow.Table:
                 return func(tables[0])
 
