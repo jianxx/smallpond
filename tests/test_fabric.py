@@ -28,11 +28,14 @@ generate_data()
 
 
 def run_scheduler(
-    runtime_ctx: RuntimeContext, scheduler: Scheduler, queue: queue.Queue
+    runtime_ctx: RuntimeContext,
+    scheduler: Scheduler,
+    queue: queue.Queue,
+    exec_plan: ExecutionPlan,
 ):
     runtime_ctx.initialize("scheduler")
     scheduler.add_state_observer(Scheduler.StateObserver(SaveSchedState(queue)))
-    retval = scheduler.run()
+    retval = scheduler.run(exec_plan)
     print(f"scheduler exited with value {retval}", file=sys.stderr)
 
 
@@ -206,9 +209,7 @@ class TestFabric(unittest.TestCase):
         self.queue_manager = Manager()
         self.sched_states = self.queue_manager.Queue()
 
-        exec_plan = Planner(runtime_ctx).create_exec_plan(plan)
         scheduler = Scheduler(
-            exec_plan,
             max_retry_count=max_retry_count,
             max_fail_count=max_fail_count,
             prioritize_retry=prioritize_retry,
@@ -216,6 +217,8 @@ class TestFabric(unittest.TestCase):
             stop_executor_on_failure=stop_executor_on_failure,
             nonzero_exitcode_as_oom=nonzero_exitcode_as_oom,
         )
+        exec_plan = Planner(runtime_ctx).create_exec_plan(plan)
+
         self.latest_state = scheduler
         self.executors = [
             Executor.create(runtime_ctx, f"executor-{i}") for i in range(num_executors)
@@ -225,7 +228,7 @@ class TestFabric(unittest.TestCase):
                 target=run_scheduler,
                 # XXX: on macOS, scheduler state observer will be cleared when cross-process
                 #      so we pass the queue and add the observer in the new process
-                args=(runtime_ctx, scheduler, self.sched_states),
+                args=(runtime_ctx, scheduler, self.sched_states, exec_plan),
                 name="scheduler",
             )
         ]

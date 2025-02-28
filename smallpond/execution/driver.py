@@ -372,10 +372,10 @@ class Driver(object):
         elif args.mode == "scheduler":
             assert plan is not None
             jobmgr = JobManager(
-                args.data_root, args.python_venv, args.task_image, args.platform
-            )
-            exec_plan = jobmgr.run(
-                plan,
+                data_root=args.data_root,
+                python_venv=args.python_venv,
+                task_image=args.task_image,
+                platform=args.platform,
                 job_id=args.job_id,
                 job_time=args.job_time,
                 job_name=args.job_name,
@@ -412,6 +412,7 @@ class Driver(object):
                 disable_log_rotation=args.disable_log_rotation,
                 output_path=args.output_path,
             )
+            exec_plan = jobmgr.run(plan)
             retval = exec_plan if exec_plan.successful else None
 
         if stop_process_on_done:

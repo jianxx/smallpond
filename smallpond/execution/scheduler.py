@@ -12,7 +12,7 @@ from collections import OrderedDict
 from concurrent.futures import ThreadPoolExecutor
 from enum import Enum
 from functools import cached_property
-from typing import Any, Callable, Dict, Iterable, List, Literal, Set, Tuple, Union
+from typing import Any, Callable, Dict, Iterable, List, Literal, Optional, Set, Tuple, Union
 
 import numpy as np
 from loguru import logger
@@ -380,20 +380,16 @@ class Scheduler(object):
 
     def __init__(
         self,
-        exec_plan: ExecutionPlan,
+        *,
         max_retry_count: int = DEFAULT_MAX_RETRY_COUNT,
         max_fail_count: int = DEFAULT_MAX_FAIL_COUNT,
-        prioritize_retry=False,
+        prioritize_retry: bool = False,
         speculative_exec: Literal["disable", "enable", "aggressive"] = "enable",
-        stop_executor_on_failure=False,
-        nonzero_exitcode_as_oom=False,
-        remove_output_root=False,
-        sched_state_observers=None,
+        stop_executor_on_failure: bool = False,
+        nonzero_exitcode_as_oom: bool = False,
+        remove_output_root: bool = False,
+        sched_state_observers: Optional[List[StateObserver]] = None,
     ) -> None:
-        self.ctx = exec_plan.ctx
-        self.exec_plan = exec_plan
-        self.logical_plan: LogicalPlan = self.exec_plan.logical_plan
-        self.logical_nodes = self.logical_plan.nodes
         self.max_retry_count = max_retry_count
         self.max_fail_count = max_fail_count
         self.standalone_mode = self.ctx.num_executors == 0
@@ -410,16 +406,12 @@ class Scheduler(object):
         # task states
         self.local_queue: List[Task] = []
         self.sched_queue: List[Task] = []
-        self.tasks: Dict[str, Task] = self.exec_plan.tasks
-        self.scheduled_tasks: Dict[TaskRuntimeId, Task] = OrderedDict()
-        self.finished_tasks: Dict[TaskRuntimeId, Task] = OrderedDict()
-        self.succeeded_tasks: Dict[str, Task] = OrderedDict()
-        self.nontrivial_tasks = dict(
-            (key, task)
-            for (key, task) in self.tasks.items()
-            if not task.exec_on_scheduler
-        )
-        self.succeeded_nontrivial_tasks: Dict[str, Task] = OrderedDict()
+        self.tasks: Dict[str, Task] = {}
+        self.scheduled_tasks: Dict[TaskRuntimeId, Task] = {}
+        self.finished_tasks: Dict[TaskRuntimeId, Task] = {}
+        self.succeeded_tasks: Dict[str, Task] = {}
+        self.nontrivial_tasks: Dict[str, Task] = {}
+        self.succeeded_nontrivial_tasks: Dict[str, Task] = {}
         # executor pool
         self.local_executor = LocalExecutor.create(self.ctx, "localhost")
         self.available_executors = {self.local_executor.id: self.local_executor}
@@ -430,9 +422,6 @@ class Scheduler(object):
         self.last_state_notify_time = 0
         self.probe_epoch = 0
         self.sched_epoch = 0
-
-    def __call__(self, *args: Any, **kwds: Any) -> Any:
-        return self.run()
 
     def __getstate__(self):
         state = self.__dict__.copy()
@@ -982,7 +971,10 @@ class Scheduler(object):
                 status = "failure"
             fout.write(f"{status}@{int(time.time())}")
 
-    def run(self) -> bool:
+    def run(self, exec_plan: ExecutionPlan) -> bool:
+        """
+        Run the execution plan.
+        """
         mp.current_process().name = f"SchedulerMainProcess#{self.sched_epoch}"
         logger.info(
             f"start to run scheduler #{self.sched_epoch} on {socket.gethostname()}"

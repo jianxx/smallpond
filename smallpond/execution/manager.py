@@ -52,20 +52,11 @@ class JobManager(object):
 
     def __init__(
         self,
+        *,
         data_root: Optional[str] = None,
         python_venv: Optional[str] = None,
         task_image: str = "default",
         platform: Optional[str] = None,
-    ) -> None:
-        self.platform = get_platform(platform)
-        self.data_root = os.path.abspath(data_root or self.platform.default_data_root())
-        self.python_venv = python_venv
-        self.task_image = task_image
-
-    @logger.catch(reraise=True, message="job manager terminated unexpectedly")
-    def run(
-        self,
-        plan: LogicalPlan,
         job_id: Optional[str] = None,
         job_time: Optional[float] = None,
         job_name: str = "smallpond",
@@ -107,8 +98,14 @@ class JobManager(object):
         sched_state_observers: Optional[List[Scheduler.StateObserver]] = None,
         output_path: Optional[str] = None,
         **kwargs,
-    ) -> ExecutionPlan:
+    ) -> None:
+        self.platform = get_platform(platform)
         logger.info(f"using platform: {self.platform}")
+
+        self.data_root = os.path.abspath(data_root or self.platform.default_data_root())
+        self.python_venv = python_venv
+        self.task_image = task_image
+        self.manifest_only_final_results = manifest_only_final_results
 
         job_id = JobId(hex=job_id or self.platform.default_job_id())
         job_time = (
@@ -145,7 +142,7 @@ class JobManager(object):
             self.platform.shared_log_root() if share_log_analytics else None
         )
 
-        runtime_ctx = RuntimeContext(
+        self.runtime_ctx = RuntimeContext(
             job_id,
             job_time,
             self.data_root,
@@ -166,27 +163,13 @@ class JobManager(object):
             output_path=output_path,
             **kwargs,
         )
-        runtime_ctx.initialize(socket.gethostname(), root_exist_ok=True)
+        self.runtime_ctx.initialize(socket.gethostname(), root_exist_ok=True)
         logger.info(
             f"command-line arguments: {' '.join([os.path.basename(sys.argv[0]), *sys.argv[1:]])}"
         )
 
-        dump(runtime_ctx, runtime_ctx.runtime_ctx_path, atomic_write=True)
-        logger.info(f"saved runtime context at {runtime_ctx.runtime_ctx_path}")
-
-        dump(plan, runtime_ctx.logcial_plan_path, atomic_write=True)
-        logger.info(f"saved logcial plan at {runtime_ctx.logcial_plan_path}")
-
-        plan.graph().render(runtime_ctx.logcial_plan_graph_path, format="png")
-        logger.info(
-            f"saved logcial plan graph at {runtime_ctx.logcial_plan_graph_path}.png"
-        )
-
-        exec_plan = Planner(runtime_ctx).create_exec_plan(
-            plan, manifest_only_final_results
-        )
-        dump(exec_plan, runtime_ctx.exec_plan_path, atomic_write=True)
-        logger.info(f"saved execution plan at {runtime_ctx.exec_plan_path}")
+        dump(self.runtime_ctx, self.runtime_ctx.runtime_ctx_path, atomic_write=True)
+        logger.info(f"saved runtime context at {self.runtime_ctx.runtime_ctx_path}")
 
         sidecar_list = sidecars or []
 
@@ -225,27 +208,26 @@ class JobManager(object):
         sched_state_observers = sched_state_observers or []
 
         if enable_sched_state_dump:
-            sched_state_exporter = SchedStateExporter(runtime_ctx.sched_state_path)
+            sched_state_exporter = SchedStateExporter(self.runtime_ctx.sched_state_path)
             sched_state_observers.insert(0, sched_state_exporter)
 
-        if os.path.exists(runtime_ctx.sched_state_path):
+        if os.path.exists(self.runtime_ctx.sched_state_path):
             logger.warning(
-                f"loading scheduler state from: {runtime_ctx.sched_state_path}"
+                f"loading scheduler state from: {self.runtime_ctx.sched_state_path}"
             )
-            scheduler: Scheduler = load(runtime_ctx.sched_state_path)
-            scheduler.sched_epoch += 1
-            scheduler.sched_state_observers = sched_state_observers
+            self.scheduler: Scheduler = load(self.runtime_ctx.sched_state_path)
+            self.scheduler.sched_epoch += 1
+            self.scheduler.sched_state_observers = sched_state_observers
         else:
-            scheduler = Scheduler(
-                exec_plan,
-                max_retry_count,
-                max_fail_count,
-                prioritize_retry,
-                speculative_exec,
-                stop_executor_on_failure,
-                nonzero_exitcode_as_oom,
-                remove_output_root,
-                sched_state_observers,
+            self.scheduler = Scheduler(
+                max_retry_count=max_retry_count,
+                max_fail_count=max_fail_count,
+                prioritize_retry=prioritize_retry,
+                speculative_exec=speculative_exec,
+                stop_executor_on_failure=stop_executor_on_failure,
+                nonzero_exitcode_as_oom=nonzero_exitcode_as_oom,
+                remove_output_root=remove_output_root,
+                sched_state_observers=sched_state_observers,
             )
             # start executors
             self.platform.start_job(
@@ -257,7 +239,7 @@ class JobManager(object):
                     "--data_root",
                     self.data_root,
                     "--runtime_ctx_path",
-                    runtime_ctx.runtime_ctx_path,
+                    self.runtime_ctx.runtime_ctx_path,
                     "executor",
                 ],
                 envs={
@@ -278,6 +260,25 @@ class JobManager(object):
                 ),
             )
 
+    @logger.catch(reraise=True, message="job manager terminated unexpectedly")
+    def run(
+        self,
+        plan: LogicalPlan,
+    ) -> ExecutionPlan:
+        dump(plan, self.runtime_ctx.logcial_plan_path, atomic_write=True)
+        logger.info(f"saved logcial plan at {self.runtime_ctx.logcial_plan_path}")
+
+        plan.graph().render(self.runtime_ctx.logcial_plan_graph_path, format="png")
+        logger.info(
+            f"saved logcial plan graph at {self.runtime_ctx.logcial_plan_graph_path}.png"
+        )
+
+        exec_plan = Planner(self.runtime_ctx).create_exec_plan(
+            plan, self.manifest_only_final_results
+        )
+        dump(exec_plan, self.runtime_ctx.exec_plan_path, atomic_write=True)
+        logger.info(f"saved execution plan at {self.runtime_ctx.exec_plan_path}")
+
         # run scheduler
-        scheduler.run()
-        return scheduler.exec_plan
+        self.scheduler.run(exec_plan)
+        return exec_plan
