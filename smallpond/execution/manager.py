@@ -212,14 +212,10 @@ class JobManager(object):
             sched_state_observers.insert(0, sched_state_exporter)
 
         if os.path.exists(self.runtime_ctx.sched_state_path):
-            logger.warning(
-                f"loading scheduler state from: {self.runtime_ctx.sched_state_path}"
-            )
-            self.scheduler: Scheduler = load(self.runtime_ctx.sched_state_path)
-            self.scheduler.sched_epoch += 1
-            self.scheduler.sched_state_observers = sched_state_observers
+            self.scheduler = Scheduler.recover_from_file(self.runtime_ctx.sched_state_path, sched_state_observers)
         else:
             self.scheduler = Scheduler(
+                ctx=self.runtime_ctx,
                 max_retry_count=max_retry_count,
                 max_fail_count=max_fail_count,
                 prioritize_retry=prioritize_retry,

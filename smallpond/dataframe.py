@@ -13,22 +13,26 @@ import ray
 import ray.exceptions
 from loguru import logger
 
+from smallpond.execution.manager import JobManager
 from smallpond.execution.task import Task
 from smallpond.io.filesystem import remove_path
 from smallpond.logical.dataset import *
 from smallpond.logical.node import *
 from smallpond.logical.optimizer import Optimizer
 from smallpond.logical.planner import Planner
-from smallpond.session import SessionBase
 
 
-class Session(SessionBase):
+class Session:
     # Extended session class with additional methods to create DataFrames.
 
     def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+        """
+        Create a smallpond environment.
+        """
+        self._job_manager = JobManager(**kwargs)
+        self._ctx = Context()
+        self._runtime_ctx = self._job_manager.runtime_ctx
         self._nodes: List[Node] = []
-
         self._node_to_tasks: Dict[Node, List[Task]] = {}
         """
         When a DataFrame is evaluated, the tasks of the logical plan are stored here.
@@ -158,52 +162,6 @@ class Session(SessionBase):
             return
         self._shutdown_called = True
 
-        # log status
-        finished = self._all_tasks_finished()
-        with open(self._runtime_ctx.job_status_path, "a") as fout:
-            status = "success" if finished else "failure"
-            fout.write(f"{status}@{datetime.now():%Y-%m-%d-%H-%M-%S}\n")
-
-        # clean up runtime directories if success
-        if finished:
-            logger.info("all tasks are finished, cleaning up")
-            self._runtime_ctx.cleanup(remove_output_root=self.config.remove_output_root)
-        else:
-            logger.warning("tasks are not finished!")
-
-        super().shutdown()
-
-    def _summarize_task(self) -> Tuple[int, int]:
-        """
-        Return the total number of tasks and the number of tasks that are finished.
-        """
-        dataset_refs = [
-            task._dataset_ref
-            for tasks in self._node_to_tasks.values()
-            for task in tasks
-            if task._dataset_ref is not None
-        ]
-        ready_tasks, _ = ray.wait(
-            dataset_refs, num_returns=len(dataset_refs), timeout=0, fetch_local=False
-        )
-        return len(dataset_refs), len(ready_tasks)
-
-    def _all_tasks_finished(self) -> bool:
-        """
-        Check if all tasks are finished.
-        """
-        dataset_refs = [
-            task._dataset_ref
-            for tasks in self._node_to_tasks.values()
-            for task in tasks
-        ]
-        try:
-            ray.get(dataset_refs, timeout=0)
-        except Exception:
-            # GetTimeoutError is raised if any task is not finished
-            # RuntimeError is raised if any task failed
-            return False
-        return True
 
 
 class DataFrame:
@@ -216,7 +174,7 @@ class DataFrame:
     def __init__(self, session: Session, plan: Node, recompute: bool = False):
         self.session = session
         self.plan = plan
-        self.optimized_plan: Optional[Node] = None
+        # self.optimized_plan: Optional[Node] = None
         self.need_recompute = recompute
         """Whether to recompute the data regardless of whether it's already computed."""
 
@@ -229,17 +187,17 @@ class DataFrame:
         """
         Get or create tasks to compute the data.
         """
-        # optimize the plan
-        if self.optimized_plan is None:
-            logger.info(f"optimizing\n{LogicalPlan(self.session._ctx, self.plan)}")
-            self.optimized_plan = Optimizer(
-                exclude_nodes=set(self.session._node_to_tasks.keys())
-            ).visit(self.plan)
-            logger.info(
-                f"optimized\n{LogicalPlan(self.session._ctx, self.optimized_plan)}"
-            )
+        # # optimize the plan
+        # if self.optimized_plan is None:
+        #     logger.info(f"optimizing\n{LogicalPlan(self.session._ctx, self.plan)}")
+        #     self.optimized_plan = Optimizer(
+        #         exclude_nodes=set(self.session._node_to_tasks.keys())
+        #     ).visit(self.plan)
+        #     logger.info(
+        #         f"optimized\n{LogicalPlan(self.session._ctx, self.optimized_plan)}"
+        #     )
         # return the tasks if already created
-        if tasks := self.session._node_to_tasks.get(self.optimized_plan):
+        if tasks := self.session._node_to_tasks.get(self.plan):
             return tasks
 
         # remove all completed task files if recompute is needed
@@ -247,16 +205,16 @@ class DataFrame:
             remove_path(
                 os.path.join(
                     self.session._runtime_ctx.completed_task_dir,
-                    str(self.optimized_plan.id),
+                    str(self.plan.id),
                 )
             )
-            logger.info(f"cleared all results of {self.optimized_plan!r}")
+            logger.info(f"cleared all results of {self.plan!r}")
 
         # create tasks for the optimized plan
         planner = Planner(self.session._runtime_ctx)
         # let planner update self.session._node_to_tasks
         planner.node_to_tasks = self.session._node_to_tasks
-        return planner.visit(self.optimized_plan)
+        return planner.visit(self.plan)
 
     def is_computed(self) -> bool:
         """

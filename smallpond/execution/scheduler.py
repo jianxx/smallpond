@@ -1,5 +1,6 @@
 import copy
 import cProfile
+from datetime import datetime
 import itertools
 import multiprocessing as mp
 import os
@@ -12,7 +13,18 @@ from collections import OrderedDict
 from concurrent.futures import ThreadPoolExecutor
 from enum import Enum
 from functools import cached_property
-from typing import Any, Callable, Dict, Iterable, List, Literal, Optional, Set, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    Dict,
+    Iterable,
+    List,
+    Literal,
+    Optional,
+    Set,
+    Tuple,
+    Union,
+)
 
 import numpy as np
 from loguru import logger
@@ -40,7 +52,7 @@ from smallpond.execution.workqueue import (
     WorkQueueInMemory,
     WorkQueueOnFilesystem,
 )
-from smallpond.io.filesystem import dump, remove_path
+from smallpond.io.filesystem import dump, load, remove_path
 from smallpond.logical.node import LogicalPlan, Node
 from smallpond.utility import cprofile_to_string
 
@@ -359,10 +371,9 @@ class Scheduler(object):
     """
 
     large_num_nontrivial_tasks = 200 if pytest_running() else 20000
-    StateCallback = Callable[["Scheduler"], Any]
 
     class StateObserver(object):
-        def __init__(self, callback: "Scheduler.StateCallback" = None) -> None:
+        def __init__(self, callback: Callable[["Scheduler"], Any] = None) -> None:
             assert callback is None or isinstance(callback, Callable)
             self.enabled = True
             self.callback = callback
@@ -380,6 +391,7 @@ class Scheduler(object):
 
     def __init__(
         self,
+        ctx: RuntimeContext,
         *,
         max_retry_count: int = DEFAULT_MAX_RETRY_COUNT,
         max_fail_count: int = DEFAULT_MAX_FAIL_COUNT,
@@ -390,18 +402,46 @@ class Scheduler(object):
         remove_output_root: bool = False,
         sched_state_observers: Optional[List[StateObserver]] = None,
     ) -> None:
+        """
+        Initialize the scheduler.
+
+        Parameters
+        ----------
+        ctx: RuntimeContext
+            The runtime context.
+        max_retry_count: int, optional
+            The maximum retry count. Default to 5.
+        max_fail_count: int, optional
+            The maximum fail count. Default to 3.
+        prioritize_retry: bool, optional
+            Whether to prioritize retry. Default to False.
+        speculative_exec: Literal["disable", "enable", "aggressive"], optional
+            If "enable", long-running tasks will be rescheduled on other executors.
+            If "aggressive", it will be more aggressive to reschedule long-running tasks.
+            If "disable", no speculative execution will be performed.
+            Default to "enable".
+        stop_executor_on_failure: bool, optional
+            Whether to stop the executor on failure. Default to False.
+        nonzero_exitcode_as_oom: bool, optional
+            Whether to treat non-zero exit code as out-of-memory. Default to False.
+        remove_output_root: bool, optional
+            Whether to remove the output root on exit. Default to False.
+        sched_state_observers: Optional[List[StateObserver]], optional
+            The state observers.
+        """
+        # configs
+        self.ctx = ctx
         self.max_retry_count = max_retry_count
         self.max_fail_count = max_fail_count
         self.standalone_mode = self.ctx.num_executors == 0
         self.prioritize_retry = prioritize_retry
-        self.disable_speculative_exec = speculative_exec == "disable"
-        self.aggressive_speculative_exec = speculative_exec == "aggressive"
+        self.speculative_exec: Literal["disable", "enable", "aggressive"] = (
+            speculative_exec
+        )
         self.stop_executor_on_failure = stop_executor_on_failure
         self.nonzero_exitcode_as_oom = nonzero_exitcode_as_oom
         self.remove_output_root = remove_output_root
-        self.sched_state_observers: List[Scheduler.StateObserver] = (
-            sched_state_observers or []
-        )
+        self.sched_state_observers = sched_state_observers or []
         self.secs_state_notify_interval = self.ctx.secs_executor_probe_interval * 2
         # task states
         self.local_queue: List[Task] = []
@@ -416,29 +456,46 @@ class Scheduler(object):
         self.local_executor = LocalExecutor.create(self.ctx, "localhost")
         self.available_executors = {self.local_executor.id: self.local_executor}
         # other runtime states
-        self.sched_running = False
-        self.sched_start_time = 0
+        self.failure = False
+        self.sched_start_time = time.time()
         self.last_executor_probe_time = 0
         self.last_state_notify_time = 0
         self.probe_epoch = 0
         self.sched_epoch = 0
 
+        self._post_init()
+
+    @staticmethod
+    def recover_from_file(
+        sched_state_path: str, sched_state_observers: List[StateObserver]
+    ) -> "Scheduler":
+        """
+        Recover the scheduler from the previous run.
+        """
+        logger.warning(f"loading scheduler state from: {sched_state_path}")
+        self: Scheduler = load(sched_state_path)
+
+        self.sched_epoch += 1
+        self.prioritize_retry = True
+        # observers are not pickled, so we need to re-add them
+        self.sched_state_observers = sched_state_observers
+
+        self._post_init()
+
     def __getstate__(self):
         state = self.__dict__.copy()
         del state["sched_state_observers"]
+        del state["profiler"]
         return state
 
     def __setstate__(self, state):
         self.__dict__.update(state)
         self.sched_state_observers = []
+        self.profiler = None
 
     @property
     def elapsed_time(self):
         return time.time() - self.sched_start_time
-
-    @property
-    def success(self) -> bool:
-        return self.exec_plan.root_task.key in self.succeeded_tasks
 
     @property
     def progress(self) -> Tuple[int, int, float]:
@@ -582,7 +639,7 @@ class Scheduler(object):
         for executor in self.working_executors:
             for idx, item in enumerate(executor.running_works.values()):
                 aggressive_retry = (
-                    self.aggressive_speculative_exec
+                    self.speculative_exec == "aggressive"
                     and len(self.good_executors) >= self.ctx.num_executors
                 )
                 short_sched_queue = len(self.sched_queue) < len(self.good_executors)
@@ -644,7 +701,7 @@ class Scheduler(object):
             for executor in self.working_executors:
                 executor.probe(self.probe_epoch)
             # start speculative execution of tasks
-            if not self.disable_speculative_exec:
+            if self.speculative_exec != "disable":
                 self.start_speculative_execution()
 
     def update_executor_states(self):
@@ -777,7 +834,7 @@ class Scheduler(object):
         return task
 
     @logger.catch(reraise=pytest_running(), message="failed to clean temp files")
-    def clean_temp_files(self, pool: ThreadPoolExecutor):
+    def clean_temp_files(self):
         remove_path(self.ctx.queue_root)
         remove_path(self.ctx.temp_root)
         remove_path(self.ctx.staging_root)
@@ -786,7 +843,10 @@ class Scheduler(object):
             logger.info(
                 f"removing outputs of {len(abandoned_tasks)} abandoned tasks: {abandoned_tasks[:3]} ..."
             )
-            assert list(pool.map(lambda t: t.clean_output(force=True), abandoned_tasks))
+            with ThreadPoolExecutor(32) as pool:
+                assert list(
+                    pool.map(lambda t: t.clean_output(force=True), abandoned_tasks)
+                )
 
     @logger.catch(reraise=pytest_running(), message="failed to export task metrics")
     def export_task_metrics(self):
@@ -963,55 +1023,45 @@ class Scheduler(object):
 
     def log_current_status(self):
         with open(self.ctx.job_status_path, "w") as fout:
-            if self.sched_running:
-                status = "running"
-            elif self.success:
-                status = "success"
-            else:
+            if self.failure:
                 status = "failure"
-            fout.write(f"{status}@{int(time.time())}")
+            else:
+                status = "running"
+            fout.write(f"{status}@{datetime.now().isoformat()}")
 
-    def run(self, exec_plan: ExecutionPlan) -> bool:
+    def _post_init(self):
         """
-        Run the execution plan.
+        Common initialization after startup or recovery.
         """
         mp.current_process().name = f"SchedulerMainProcess#{self.sched_epoch}"
         logger.info(
             f"start to run scheduler #{self.sched_epoch} on {socket.gethostname()}"
         )
 
-        perf_profile = None
         if self.ctx.enable_profiling:
-            perf_profile = cProfile.Profile()
-            perf_profile.enable()
+            self.profiler = cProfile.Profile()
+            self.profiler.enable()
+
+        self.sched_running = True
+        self.sched_start_time = time.time()
+        self.last_executor_probe_time = 0
+        self.last_state_notify_time = 0
+        self.prioritize_retry |= self.sched_epoch > 0
+
+        if self.local_queue or self.sched_queue:
+            pending_tasks = [
+                item
+                for item in self.local_queue + self.sched_queue
+                if isinstance(item, Task)
+            ]
+            self.local_queue.clear()
+            self.sched_queue.clear()
+            logger.info(
+                f"requeue {len(pending_tasks)} pending tasks with latest epoch #{self.sched_epoch}: {pending_tasks[:3]} ..."
+            )
+            self.try_enqueue(pending_tasks)
 
         with ThreadPoolExecutor(32) as pool:
-            self.sched_running = True
-            self.sched_start_time = time.time()
-            self.last_executor_probe_time = 0
-            self.last_state_notify_time = 0
-            self.prioritize_retry |= self.sched_epoch > 0
-
-            if self.local_queue or self.sched_queue:
-                pending_tasks = [
-                    item
-                    for item in self.local_queue + self.sched_queue
-                    if isinstance(item, Task)
-                ]
-                self.local_queue.clear()
-                self.sched_queue.clear()
-                logger.info(
-                    f"requeue {len(pending_tasks)} pending tasks with latest epoch #{self.sched_epoch}: {pending_tasks[:3]} ..."
-                )
-                self.try_enqueue(pending_tasks)
-
-            if self.sched_epoch == 0:
-                leaf_tasks = self.exec_plan.leaves
-                logger.info(
-                    f"enqueue {len(leaf_tasks)} leaf tasks: {leaf_tasks[:3]} ..."
-                )
-                self.try_enqueue(leaf_tasks)
-
             self.log_overall_progress()
             while (num_finished_tasks := self.process_finished_tasks(pool)) > 0:
                 logger.info(
@@ -1019,54 +1069,64 @@ class Scheduler(object):
                 )
                 self.log_overall_progress()
 
-            earlier_running_tasks = [
-                item for item in self.running_works if isinstance(item, Task)
-            ]
-            if earlier_running_tasks:
-                logger.info(
-                    f"enqueue {len(earlier_running_tasks)} earlier running tasks: {earlier_running_tasks[:3]} ..."
-                )
-                self.try_enqueue(earlier_running_tasks)
+        earlier_running_tasks = [
+            item for item in self.running_works if isinstance(item, Task)
+        ]
+        if earlier_running_tasks:
+            logger.info(
+                f"enqueue {len(earlier_running_tasks)} earlier running tasks: {earlier_running_tasks[:3]} ..."
+            )
+            self.try_enqueue(earlier_running_tasks)
 
-            self.suspend_good_executors()
-            self.add_state_observer(
-                Scheduler.StateObserver(Scheduler.log_current_status)
-            )
-            self.add_state_observer(
-                Scheduler.StateObserver(Scheduler.export_timeline_figs)
-            )
+        self.suspend_good_executors()
+        self.add_state_observer(Scheduler.StateObserver(Scheduler.log_current_status))
+        self.add_state_observer(Scheduler.StateObserver(Scheduler.export_timeline_figs))
+        self.notify_state_observers(force_notify=True)
+
+    def run(self, exec_plan: ExecutionPlan) -> bool:
+        """
+        Run the execution plan.
+        """
+        leaf_tasks = exec_plan.leaves
+        logger.info(f"enqueue {len(leaf_tasks)} leaf tasks: {leaf_tasks[:3]} ...")
+        self.try_enqueue(leaf_tasks)
+
+        try:
+            with ThreadPoolExecutor(32) as pool:
+                self.local_executor.start(pool)
+                self.sched_loop(pool, exec_plan.root_task)
+        finally:
+            logger.info(f"schedule loop stopped")
             self.notify_state_observers(force_notify=True)
 
-            try:
-                self.local_executor.start(pool)
-                self.sched_loop(pool)
-            finally:
-                logger.info(f"schedule loop stopped")
-                self.sched_running = False
-                self.notify_state_observers(force_notify=True)
-                self.export_task_metrics()
-                self.stop_executors()
+        logger.success(f"final output path: {exec_plan.final_output_path}")
+        logger.info(
+            f"analyzed plan:{os.linesep}{exec_plan.analyzed_logical_plan.explain_str()}"
+        )
 
-            # if --output_path is specified, remove the output root as well
-            if self.remove_output_root or self.ctx.final_output_path:
-                remove_path(self.ctx.staging_root)
-                remove_path(self.ctx.output_root)
+        return True
 
-            if self.success:
-                self.clean_temp_files(pool)
-                logger.success(f"final output path: {self.exec_plan.final_output_path}")
-                logger.info(
-                    f"analyzed plan:{os.linesep}{self.exec_plan.analyzed_logical_plan.explain_str()}"
-                )
+    def cleanup(self):
+        self.export_task_metrics()
+        self.stop_executors()
 
-        if perf_profile is not None:
+        # if --output_path is specified, remove the output root as well
+        if self.remove_output_root:
+            remove_path(self.ctx.staging_root)
+            remove_path(self.ctx.output_root)
+
+        if not self.failure:
+            self.clean_temp_files()
+            if self.ctx.final_output_path:
+                remove_path(self.ctx.final_output_path)
+
+        if self.profiler is not None:
             logger.debug(
-                f"scheduler perf profile:{os.linesep}{cprofile_to_string(perf_profile)}"
+                f"scheduler perf profile:{os.linesep}{cprofile_to_string(self.profiler)}"
             )
 
         logger.info(f"scheduler of job {self.ctx.job_id} exits")
         logger.complete()
-        return self.success
 
     def try_enqueue(self, tasks: Union[Iterable[Task], Task]):
         tasks = tasks if isinstance(tasks, Iterable) else [tasks]
@@ -1092,15 +1152,15 @@ class Scheduler(object):
             else:
                 self.sched_queue.append(task)
 
-    def sched_loop(self, pool: ThreadPoolExecutor) -> bool:
+    def sched_loop(self, pool: ThreadPoolExecutor, task: Task):
+        """
+        Run the scheduler loop until the task is finished or failed.
+        """
+
         has_progress = True
         do_notify = False
 
-        if self.success:
-            logger.success(f"job already succeeded, stopping scheduler ...")
-            return True
-
-        while self.sched_running:
+        while not self.failure and self.tasks[task.key].status == WorkStatus.INCOMPLETE:
             self.probe_executors()
             self.update_executor_states()
 
@@ -1152,9 +1212,6 @@ class Scheduler(object):
                 do_notify = not self.notify_state_observers()
 
             has_progress |= self.process_finished_tasks(pool) > 0
-
-        # out of loop
-        return self.success
 
     def dispatch_tasks(self, pool: ThreadPoolExecutor):
         # sort pending tasks
@@ -1240,6 +1297,10 @@ class Scheduler(object):
         return num_dispatched_tasks
 
     def process_finished_tasks(self, pool: ThreadPoolExecutor) -> int:
+        """
+        Process finished tasks from all executors.
+        Return the number of finished tasks.
+        """
         pop_results = pool.map(RemoteExecutor.pop, self.available_executors.values())
         num_finished_tasks = 0
 
@@ -1309,7 +1370,7 @@ class Scheduler(object):
                             f"task failed too many times: {finished_task}, stopping ..."
                         )
                         self.stop_executors()
-                        self.sched_running = False
+                        self.failure = True
 
                     if not executor.local and finished_task.oom(
                         self.nonzero_exitcode_as_oom

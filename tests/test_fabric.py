@@ -210,6 +210,7 @@ class TestFabric(unittest.TestCase):
         self.sched_states = self.queue_manager.Queue()
 
         scheduler = Scheduler(
+            ctx=runtime_ctx,
             max_retry_count=max_retry_count,
             max_fail_count=max_fail_count,
             prioritize_retry=prioritize_retry,
